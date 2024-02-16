@@ -133,30 +133,39 @@ p {
     </section>
     <!-- Add this script after the HTML content -->
 
-
-<script>
-    // Function to scroll to a specific slide
-    function scrollToSlide(slideIndex) {
-        var carousel = document.getElementById('carouselExampleDark');
-        var carouselInstance = new bootstrap.Carousel(carousel);
-        carouselInstance.to(slideIndex);
-    }
-
-    // Function to automatically scroll to the next slide after a specified interval
-    function autoScroll() {
-        setInterval(function () {
+    <script>
+        var carouselInstance; // Variable to hold the carousel instance
+    
+        // Function to scroll to a specific slide
+        function scrollToSlide(slideIndex) {
+            carouselInstance.to(slideIndex);
+        }
+    
+        // Function to automatically scroll to the next slide after a specified interval
+        function autoScroll() {
+            setInterval(function () {
+                var carousel = document.getElementById('carouselExampleDark');
+                var currentSlideIndex = carousel.querySelector('.carousel-item.active').getAttribute('data-bs-slide-to');
+                var nextSlideIndex = (parseInt(currentSlideIndex) + 1) % carousel.querySelectorAll('.carousel-item').length;
+                scrollToSlide(nextSlideIndex);
+            }, 3000); // Change the interval here (in milliseconds)
+        }
+    
+        // Call autoScroll function when the document is loaded
+        document.addEventListener('DOMContentLoaded', function () {
             var carousel = document.getElementById('carouselExampleDark');
-            var currentSlideIndex = carousel.querySelector('.carousel-item.active').getAttribute('data-bs-slide-to');
-            var nextSlideIndex = (parseInt(currentSlideIndex) + 1) % carousel.querySelectorAll('.carousel-item').length;
-            scrollToSlide(nextSlideIndex);
-        }, 3000); // Change the interval here (in milliseconds)
-    }
-
-    // Call autoScroll function when the document is loaded
-    document.addEventListener('DOMContentLoaded', function () {
-        autoScroll();
-    });
-</script>
+            carouselInstance = new bootstrap.Carousel(carousel, { ride: "carousel", interval: false });
+    
+            // Start auto-scrolling
+            autoScroll();
+    
+            // Event listener to handle manual slide change by clicking or touching
+            carousel.addEventListener('click', function() {
+                clearInterval(autoScrollInterval); // Stop auto-scrolling
+            });
+        });
+    </script>
+    
 
     
 
