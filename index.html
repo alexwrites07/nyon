@@ -128,14 +128,43 @@ p {
     </header><!-- #header -->
 
     
-  <section class="banners py-5">
+  <section class="banners ">
   </section><section class="banners py-5">
     </section>
+    <!-- Add this script after the HTML content -->
+
+
+<script>
+    // Function to scroll to a specific slide
+    function scrollToSlide(slideIndex) {
+        var carousel = document.getElementById('carouselExampleDark');
+        var carouselInstance = new bootstrap.Carousel(carousel);
+        carouselInstance.to(slideIndex);
+    }
+
+    // Function to automatically scroll to the next slide after a specified interval
+    function autoScroll() {
+        setInterval(function () {
+            var carousel = document.getElementById('carouselExampleDark');
+            var currentSlideIndex = carousel.querySelector('.carousel-item.active').getAttribute('data-bs-slide-to');
+            var nextSlideIndex = (parseInt(currentSlideIndex) + 1) % carousel.querySelectorAll('.carousel-item').length;
+            scrollToSlide(nextSlideIndex);
+        }, 3000); // Change the interval here (in milliseconds)
+    }
+
+    // Call autoScroll function when the document is loaded
+    document.addEventListener('DOMContentLoaded', function () {
+        autoScroll();
+    });
+</script>
+
+    
+
     <section class="banners py-5">
         <div class="container  pt-4">
             <div class="row">
                 <div class="col-lg-5 col-sm-4 col-md-4">
-                    <h1 class="display-3 text-white animated slideInDown mb-4">Making deep<br> learning models <br>
+                    <h1 class="display-3 text-white animated slideInDown mb-4 -py-5">Making deep<br> learning models <br>
                         <span id="flipper" class="flip">
                             <span class="step step0 set">Lean</span>
                             <span class="step step1">Efficient</span>
@@ -167,13 +196,7 @@ p {
                                 <div class="row">
                                     <div class="col-lg-12 col-sm-12 col-md-12">
                                         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                                            <div class="carousel-indicators">
-                                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
-                                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-                                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
-                                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
-                                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                            </div>
+                                          
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active">
                                                     <div class="container">
@@ -238,9 +261,8 @@ p {
 
 
                                             </div>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                                                <img src="assets/images/icon.png">
-                                            </button>
+                                            
+                                       
                                         </div>
                                     </div>
 
@@ -252,7 +274,7 @@ p {
         </div>
     </section>
     <!-- Services  -->
-    <section class="py-5 Services">
+    <section class="-py-5 Services">
         <div class="container">
             <div class="section ourTeam">
 
@@ -439,8 +461,7 @@ p {
                       <div class="mt-5 wow zoomIn complex" data-wow-delay="0.1s"
                         style="visibility: visible; animation-delay: 0.1s; animation-name: zoomIn;">
                         <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='https://zero.nyunai.com'">EXPLORE
-                            &nbsp;&nbsp; <img src="assets/images/arrow.png" class="explore"><img src="assets/images/arrow-1.png"
-                                class="explores">
+                             
 
                         </button>
                     </div>
@@ -572,7 +593,7 @@ p {
             </div>
         </div>
     </section>
-  <footer class="bg-dark text-white  text-lg-start py-5">
+    <footer class="bg-dark text-white text-lg-start py-5">
         <!-- Grid container -->
         <div class="container p-4">
             <!--Grid row-->
@@ -582,119 +603,99 @@ p {
                     style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
                     <img src="assets/images/footer-logo.svg" class="w-100 pb-5">
                     <p class="mt-4 pb-2">The trailblazers in unleashing the true potential of your business through our
-                        cutting-edge AI solutions
-                        using lean, efficient, and super-fast deep learning models</p>
+                        cutting-edge AI solutions using lean, efficient, and super-fast deep learning models</p>
                     <span class="copy">© nyunai private limited. All rights reserved.</span>
                 </div>
                 <!--Grid column-->
-
+    
                 <!--Grid column-->
                 <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-0 wow zoomIn" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
                     <h5 class="text-uppercase">QUICK LINKS</h5>
-
+    
                     <ul class="list-unstyled mb-0">
                         <li>
                             <a href="#!" class="">Support</a>
                         </li>
-
+    
                         <li>
                             <a href="#!" class=""> Demo</a>
                         </li>
-
+    
                         <li>
                             <a href="#!" class=""> About</a>
                         </li>
-
-
+    
+    
                         <li>
                             <a href="#!" class=""> Services</a>
                         </li>
-
+    
                         <li>
                             <a href="#!" class=""> Products</a>
                         </li>
-
+    
                     </ul>
                 </div>
                 <!--Grid column-->
                 <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-0 wow zoomIn" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
                     <h5 class="text-uppercase">PRODUCTS</h5>
-
+    
                     <ul class="list-unstyled mb-0">
                         <li>
                             <a href="nyunzero" class="">nyunzero</a>
                         </li>
-
+    
                         <li>
                             <a href="nyunadapt" class=""> nyunadapt</a>
                         </li>
-
+    
                         <li>
                             <a href="nyunkompress" class=""> nyunkompress</a>
                         </li>
-
+    
                         <li>
                             <a href="nyuntrack" class=""> nyuntrack</a>
                         </li>
-
-
-
-
+    
                     </ul>
                 </div>
                 <!--Grid column-->
                 <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-0 wow zoomIn" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
                     <h5 class="text-uppercase mb-4">SOCIAL</h5>
-
+    
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a href="#!" class="">Linkedin
-
-                            </a>
+                            <a href="#" class="text-white"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li>
+                            <a href="#" class="text-white"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         </li>
                         <li>
-                            <a href="#!" class=""> Twitter
-                            </a>
+                            <a href="#" class="text-white"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                         </li>
-                        <li>
-                            <a href="#!" class=""> Medium</a>
-                        </li>
-
+    
                     </ul>
                 </div>
-                <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-0">
+                <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-0 ">
                     <h5 class="text-uppercase mb-4">CONTACT</h5>
-
+    
                     <p>contact@nyunai.com</p>
-
-
-                    </ul>
+    
                 </div>
                 <div class="col-lg-12">
                     <span class="copys">© nyunai private limited. All rights reserved.</span>
-
+    
                 </div>
                 <!--Grid column-->
             </div>
             <!--Grid row-->
         </div>
         <!-- Grid container -->
-
-
     </footer>
     <!-- Social Icons Start-->
-    <div class="sticky-social">
-        <ul class="social">
-            <li class="fb"><a href="#" class="text-dark"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            <li class="insta"><a href="#" class="text-dark"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-
-            <li class="twitter"><a href="#" class="text-dark"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-
-        </ul>
-    </div>
+   
     <!-- Social Icons End -->
 
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
