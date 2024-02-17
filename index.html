@@ -91,26 +91,24 @@ p {
 
 <body>
 
-  <header id="header">
+    <header id="header">
         <div class="container">
-
             <div id="logo" class="pull-left">
                 <a href="index.html"><img src="assets/images/logo.png" alt="" title=""></img></a>
-
             </div>
-
+    
             <nav id="nav-menu-container">
                 <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
                     <li class="menu-has-children"><a href="javascript:void(0)" class="sf-with-ul">Products</a>
                         <ul class="bg-dark" style="display: none;">
-                         <li><a href="#nyunaizero">N-zero</a></li>
-                            <li><a href="#nyunkompress">N-kompress</a></li>
-                            <li><a href="#nyunadapt">N-adapt</a></li>
-                            <li><a href="#ntrack">N-track</a></li>
-
-                        </ul>
+                            <li><a href="#nyunaizero">N-zero</a></li>
+                               <li><a href="#nyunkompress">N-kompress</a></li>
+                               <li><a href="#nyunadapt">N-adapt</a></li>
+                               <li><a href="#ntrack">N-track</a></li>
+   
+                           </ul>
                     </li>
-                    <li class="menu-has-children"><a href="javascript:void(0)" class="sf-with-ul">Services</a>
+                    <!-- <li class="menu-has-children"><a href="javascript:void(0)" class="sf-with-ul">Services</a>
                         <ul style="display: none;">
                             <li><a href="<?php echo base_url('contact');?>">Developing use case-specific models</a></li>
                             <li><a href="<?php echo base_url('contact');?>">Compressing your existing Models</a></li>
@@ -118,14 +116,22 @@ p {
                             <li><a href="<?php echo base_url('contact');?>">Improving Inference speeds</a></li>
                             <li><a href="<?php echo base_url('contact');?>">Enabling to switch from cloud to edge</a></li>
                         </ul>
+                    </li> -->
+                    <li class="menu-has-children"><a href="javascript:void(0)" class="sf-with-ul">Services</a>
+                        <ul style="display: none;">
+                            <li><a href="./coming.html">Developing use case-specific models</a></li>
+                            <li><a href="./coming.html">Compressing your existing Models</a></li>
+                            <li><a href="./coming.html">Training LLMs on your data</a></li>
+                            <li><a href="./coming.html">Improving Inference speeds</a></li>
+                            <li><a href="./coming.html">Enabling to switch from cloud to edge</a></li>
+                        </ul>
                     </li>
-                    <li><a href="./about-us.html">About Us</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
                     <li><a href="contact-us.html">Contact Us</a></li>
-
                 </ul>
             </nav>
         </div>
-    </header><!-- #header -->
+    </header>
 
     
   <section class="banners ">
@@ -450,7 +456,7 @@ p {
     </section> -->
     <!-- Services -->
     <section id="nyunaizero" class="zero py-5">
-        <div class="py-5">
+        <div class="py-5 bn">
             <div class="row">
                 <div class="col-lg-12 mt-5">
                     <img src="assets/images/image-2.svg" class="w-100 wow zoomIn" data-wow-delay="0.1s"
@@ -461,23 +467,18 @@ p {
                 </div>
                 <div class="col-lg-12 text-center mt-5 wow zoomIn" data-wow-delay="0.1s"
                     style="visibility: visible; animation-delay: 0.1s; animation-name: zoomIn;">
-                    <h5 style="font-size: 28px">Nyun Zero is a No-code, Super user-friendly, 360-degree efficiency AI-driven suite. 
-
-
-</h5>
-                    <p>Nyun Zero provides a seamless and hassle-free entry point to the world of Artificial Intelligence, whether you're a seasoned pro or just starting out. It encompasses multiple frameworks for deep learning models and is flexible in terms of deployment on multiple devices.. You can swiftly implement AI solutions within your organization, empowering your team to leverage the full potential of AI in solving complex problems and driving innovation.
-                    </p>
-                      <div class="mt-5 wow zoomIn complex" data-wow-delay="0.1s"
-                        style="visibility: visible; animation-delay: 0.1s; animation-name: zoomIn;">
-                        <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='https://zero.nyunai.com'">EXPLORE
-                             
-
-                        </button>
+                    <div style="margin: 0 7%;">
+                        <h5 style="font-size: 28px">Nyun Zero is a No-code, Super user-friendly, 360-degree efficiency AI-driven suite.</h5>
+                        <p class="jk">Nyun Zero provides a seamless and hassle-free entry point to the world of Artificial Intelligence, whether you're a seasoned pro or just starting out. It encompasses multiple frameworks for deep learning models and is flexible in terms of deployment on multiple devices. You can swiftly implement AI solutions within your organization, empowering your team to leverage the full potential of AI in solving complex problems and driving innovation.</p>
+                        <div class="mt-5 complex">
+                            <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='https://zero.nyunai.com'">EXPLORE</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
     <section id="nyunadapt" class="un-lock py-5">
         <div class="container py-5">
            
@@ -572,10 +573,9 @@ p {
                         data. Rest assured, your data remains solely with you, reinforcing our commitment to maintaining
                         its
                         confidentiality and protection.</p>
-                    <div class="text-end">
+                    <div class="text-front">
                         <button type="button" class="btn btn-outline-secondary">Read our privacy policy
-                            &nbsp;&nbsp; <img src="assets/images/arrow.png" class="explore"> <img src="assets/images/arrow-1.png"
-                                class="explores">
+                            
 
                         </button>
                     </div>
@@ -595,8 +595,10 @@ p {
                         solutions can revolutionize your business.
                     </p>
                     <div class="mt-5">
-                    <a href="<?php echo base_url('contact');?>"> <button Developing type="button"  class="btn btn-success px-5">&nbsp;&nbsp; Schedule a Call
-                            &nbsp;&nbsp;</button></a>
+                    <!-- <a href="<?php echo base_url('contact');?>"> <button Developing type="button"  class="btn btn-success px-5">&nbsp;&nbsp; Schedule a Call
+                            &nbsp;&nbsp;</button></a> -->
+                            <a href="./coming.html"> <button Developing type="button"  class="btn btn-success px-5">&nbsp;&nbsp; Schedule a Call
+                                &nbsp;&nbsp;</button></a>
                     </div>
                 </div>
             </div>
@@ -605,104 +607,78 @@ p {
     <footer class="bg-dark text-white text-lg-start py-5">
         <!-- Grid container -->
         <div class="container p-4">
-            <!--Grid row-->
+            <!-- Grid row -->
             <div class="row">
-                <!--Grid column-->
+                <!-- Grid column -->
                 <div class="col-lg-4 col-md-4 col-sm-4 mb-4 mb-md-0 wow zoomIn" data-wow-delay="0.3s"
-                    style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
+                    style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn; margin-left:-5%;margin-right: 5%;">
                     <img src="assets/images/footer-logo.svg" class="w-100 pb-5">
                     <p class="mt-4 pb-2">The trailblazers in unleashing the true potential of your business through our
                         cutting-edge AI solutions using lean, efficient, and super-fast deep learning models</p>
                     <span class="copy">© nyunai private limited. All rights reserved.</span>
                 </div>
-                <!--Grid column-->
+                <!-- Grid column -->
     
-                <!--Grid column-->
-                <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-0 wow zoomIn" data-wow-delay="0.3s"
+                <!-- Grid column -->
+                <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-4 wow zoomIn" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
-                    <h5 class="text-uppercase">QUICK LINKS</h5>
+                    <h5 class="text-uppercase mb-4">QUICK LINKS</h5>
     
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="">Support</a>
-                        </li>
-    
-                        <li>
-                            <a href="#!" class=""> Demo</a>
-                        </li>
-    
-                        <li>
-                            <a href="#!" class=""> About</a>
-                        </li>
-    
-    
-                        <li>
-                            <a href="#!" class=""> Services</a>
-                        </li>
-    
-                        <li>
-                            <a href="#!" class=""> Products</a>
-                        </li>
-    
+                    <ul class="list-unstyled mb-4">
+                        <li><a href="./coming.html" class="">Support</a></li>
+                        <li><a href="./coming.html" class="">Demo</a></li>
+                        <li><a href="./coming.html" class="">About</a></li>
+                        <li><a href="./coming.html" class="">Services</a></li>
+                        <li><a href="./coming.html" class="">Products</a></li>
                     </ul>
                 </div>
-                <!--Grid column-->
-                <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-0 wow zoomIn" data-wow-delay="0.3s"
+                <!-- Grid column -->
+    
+                <!-- Grid column -->
+                <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-4 wow zoomIn" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
-                    <h5 class="text-uppercase">PRODUCTS</h5>
+                    <h5 class="text-uppercase mb-4">PRODUCTS</h5>
     
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="nyunzero" class="">nyunzero</a>
-                        </li>
-    
-                        <li>
-                            <a href="nyunadapt" class=""> nyunadapt</a>
-                        </li>
-    
-                        <li>
-                            <a href="nyunkompress" class=""> nyunkompress</a>
-                        </li>
-    
-                        <li>
-                            <a href="nyuntrack" class=""> nyuntrack</a>
-                        </li>
-    
+                    <ul class="list-unstyled mb-4">
+                        <li><a href="#nyunaizero" class="">nyunzero</a></li>
+                        <li><a href="#nyunadapt" class="">nyunadapt</a></li>
+                        <li><a href="#nyunkompress" class="">nyunkompress</a></li>
+                        <li><a href="#ntrack" class="">nyuntrack</a></li>
                     </ul>
                 </div>
-                <!--Grid column-->
-                <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-0 wow zoomIn" data-wow-delay="0.3s"
+                <!-- Grid column -->
+    
+                <!-- Grid column -->
+                <div class="col-sm-4 col-md-3 col-lg-2 mb-4 mb-md-0 wow zoomIn" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
                     <h5 class="text-uppercase mb-4">SOCIAL</h5>
     
                     <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#" class="text-white"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li>
-                            <a href="#" class="text-white"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        </li>
-                        <li>
-                            <a href="#" class="text-white"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        </li>
-    
+                        <li><a href="https://in.linkedin.com/company/nyunai?trk=public_profile_experience-item_profile-section-card_image-click" class="text-white"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#" class="text-white"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#" class="text-white"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-0 ">
+                <!-- Grid column -->
+    
+                <!-- Grid column -->
+                <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-0 -ml-24">
                     <h5 class="text-uppercase mb-4">CONTACT</h5>
-    
                     <p>contact@nyunai.com</p>
-    
                 </div>
-                <div class="col-lg-12">
+                <!-- Grid column -->
+                
+                <!-- Grid column -->
+                <div class="col-lg-12 mt-4">
                     <span class="copys">© nyunai private limited. All rights reserved.</span>
-    
                 </div>
-                <!--Grid column-->
+                <!-- Grid column -->
             </div>
-            <!--Grid row-->
+            <!-- Grid row -->
         </div>
         <!-- Grid container -->
     </footer>
+    
     <!-- Social Icons Start-->
    
     <!-- Social Icons End -->
