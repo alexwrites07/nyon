@@ -8,12 +8,33 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
-
+    <style>
+        .carousel-item {
+            height: 300px; /* Adjust the height as needed */
+            display: flex;
+            align-items: center; /* Vertically center the content */
+        }
+        .carousel-item img {
+            max-height: 100%;
+            max-width: 100%;
+            margin: auto; /* Center the image horizontally */
+        }
+        
+    </style>
+    <style>
+        .carousel-control-next {
+            right: 0; /* Adjust the position of the right arrow */
+            left: auto; /* Reset the left property */
+            top:20%;
+            width: 5%; /* Adjust the width of the arrow */
+        }
+    </style>
+    
     <!-- Favicons -->
     
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
-
+    
     <!-- Bootstrap CSS File -->
     <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -22,6 +43,7 @@
     <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
     <!-- Main Stylesheet File -->
     <link href="assets/css/stylecs.css" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet">
     <style>
         @media only screen and (max-width: 600px) {
 
@@ -139,44 +161,9 @@ p {
     </section>
     <!-- Add this script after the HTML content -->
 
-    <script>
-        var carouselInstance; // Variable to hold the carousel instance
-    
-        // Function to scroll to a specific slide
-        function scrollToSlide(slideIndex) {
-            carouselInstance.to(slideIndex);
-        }
-    
-        // Function to automatically scroll to the next slide after a specified interval
-        function autoScroll() {
-            setInterval(function () {
-                var carousel = document.getElementById('carouselExampleDark');
-                var currentSlideIndex = carousel.querySelector('.carousel-item.active').getAttribute('data-bs-slide-to');
-                var nextSlideIndex = (parseInt(currentSlideIndex) + 1) % carousel.querySelectorAll('.carousel-item').length;
-                scrollToSlide(nextSlideIndex);
-            }, 3000); // Change the interval here (in milliseconds)
-        }
-    
-        // Call autoScroll function when the document is loaded
-        document.addEventListener('DOMContentLoaded', function () {
-            var carousel = document.getElementById('carouselExampleDark');
-            carouselInstance = new bootstrap.Carousel(carousel, { ride: "carousel", interval: false });
-    
-            // Start auto-scrolling
-            autoScroll();
-    
-            // Event listener to handle manual slide change by clicking or touching
-            carousel.addEventListener('click', function() {
-                clearInterval(autoScrollInterval); // Stop auto-scrolling
-            });
-        });
-    </script>
-    
-
-    
 
     <section class="banners py-5">
-        <div class="container  pt-4">
+        <div class="container pt-4">
             <div class="row">
                 <div class="col-lg-5 col-sm-4 col-md-4">
                     <h1 class="display-3 text-white animated slideInDown mb-4 -py-5">Making deep<br> learning models <br>
@@ -186,107 +173,199 @@ p {
                             <span class="step step2">Faster</span>
                             <span class="step step3">Affordable</span>
                             <span class="step step4 down">Sustainable</span>
-
                         </span>
                     </h1>
                     <div class="ctn">
-                            <a href="contact-us.html" type="button" class="btn btn-outline-secondary w-50">Contact Us &gt;&gt;
-                            </a>
-
-                        </div>
+                        <a href="contact-us.html" type="button" class="btn btn-outline-secondary w-50">Contact Us &gt;&gt;
+                        </a>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-sm-4 col-md-4 cover">
                     <img src="assets/images/img.png" class="w-100">
                 </div>
-                <div class="col-sm-4 col-md-4  col-lg-4 ">
-                        <div class=" ">
-                            <p class=" pt-2">Unleash the true potential of your business through our lean,
-                                efficient, and super-fast deep learning
-                                models.
-                                Whether it's <span> optimizing performance, or accelerating inference speeds, we've got
-                                    you covered.
-
-                            </span></p>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-12 col-sm-12 col-md-12">
-                                        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                                          
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="col-lg-11">
-                                                                <div class="nyunai">
-                                                                    <p>Developing the state-of-the-art (SOTA) model
-                                                                        pruning method, called chipnet, <span>ICLR
-                                                                            2021</span>
-                                                                    </p>
-                                                                    <button type="button" class="btn btn-light w-100"><img src="assets/images/icrl.svg"></button>
-                                                                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 ">
+                    <div class="">
+                        <p class=" pt-2">Unleash the true potential of your business through our lean,
+                            efficient, and super-fast deep learning
+                            models.
+                            Whether it's <span> optimizing performance, or accelerating inference speeds, we've got
+                                you covered.
+                        </span></p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-sm-12 col-md-12">
+                                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="false">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-lg-11">
+                                                            <div class="nyunai">
+                                                                <p>Developing the state-of-the-art (SOTA) model
+                                                                    pruning method, called chipnet, <span>ICLR
+                                                                        2021</span>
+                                                                </p>
+                                                                <button type="button" class="btn btn-light w-100"><img
+                                                                        src="assets/images/icrl.svg"></button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="carousel-item">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="col-lg-11">
-                                                                <div class="nyunai">
-                                                                    <p>Improving the generalization ability &amp;
-                                                                        efficiency
-                                                                        of AI metamodels with metadock, <span>CVPR
-                                                                            2022</span>
-                                                                    </p>
-                                                                    <button type="button" class="btn btn-light w-100"><img src="assets/images/cvpr.png"></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="carousel-item">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="col-lg-11">
-                                                                <div class="nyunai">
-                                                                    <p>Training CNNs on very large images using a single
-                                                                        GPU, a task that was previously impossible, with
-                                                                        patchGD, <span>NeurIPS 2023*</span></p>
-                                                                    <button type="button" class="btn btn-light w-100"><img src="assets/images/ne1.png"></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="carousel-item">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="col-lg-11">
-                                                                <div class="nyunai">
-                                                                    <p>Glora, the best way to design large models with
-                                                                        inexpensive computers, <span>NeurIPS
-                                                                            2023*</span>
-                                                                    </p>
-                                                                    <button type="button" class="btn btn-light w-100"><img src="assets/images/ne1.png"></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
                                             </div>
-                                            
-                                       
+                                            <div class="carousel-item">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-lg-11">
+                                                            <div class="nyunai">
+                                                                <p>Improving the generalization ability &amp;
+                                                                    efficiency
+                                                                    of AI metamodels with metadock, <span>CVPR
+                                                                        2022</span>
+                                                                </p>
+                                                                <button type="button" class="btn btn-light w-100"><img
+                                                                        src="assets/images/cvpr.png"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-lg-11">
+                                                            <div class="nyunai">
+                                                                <p>Training CNNs on very large images using a single
+                                                                    GPU, a task that was previously impossible, with
+                                                                    patchGD, <span>NeurIPS 2023*</span></p>
+                                                                <button type="button" class="btn btn-light w-100"><img
+                                                                        src="assets/images/ne1.png"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-lg-11">
+                                                            <div class="nyunai">
+                                                                <p>Glora, the best way to design large models with
+                                                                    inexpensive computers, <span>NeurIPS
+                                                                        2023*</span>
+                                                                </p>
+                                                                <button type="button" class="btn btn-light w-100"><img
+                                                                        src="assets/images/ne1.png"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev" style="left: 0;">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden"></span>
+                                        </a>
+                                        <!-- Next button on the right -->
+                                        <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next" style="right: 0;">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden"></span>
+                                        </a>
+                                     
                                     </div>
-
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- Bootstrap Bundle with Popper -->
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
+                        
+                        <script>
+                            var carouselInstance; // Variable to hold the carousel instance
+                            var autoScrollInterval = null; // Variable to hold the auto-scroll interval
+                            var autoScrollPaused = false; // Variable to track if auto-scrolling is paused
+                            var startX = 0; // Variable to store the initial mouse position
+                        
+                            // Function to start auto-scrolling
+                            function startAutoScroll() {
+                                if (autoScrollInterval === null && !autoScrollPaused) {
+                                    autoScrollInterval = setInterval(function () {
+                                        carouselInstance.next(); // Move to the next slide
+                                    }, 3000); // Change the interval here (in milliseconds)
+                                }
+                            }
+                        
+                            // Function to handle manual slide change
+                            function manualScroll() {
+                                $('#carouselExampleDark').on('mousedown', function(e) {
+                                    startX = e.clientX; // Store the initial mouse position
+                                });
+                        
+                                $('#carouselExampleDark').on('mouseup', function(e) {
+                                    var endX = e.clientX; // Get the final mouse position
+                                    var threshold = 50; // Adjust the threshold as needed
+                        
+                                    if (startX - endX > threshold) { // If dragged left
+                                        carouselInstance.next(); // Move to the next slide
+                                    } else if (endX - startX > threshold) { // If dragged right
+                                        carouselInstance.prev(); // Move to the previous slide
+                                    }
+                        
+                                    clearInterval(autoScrollInterval); // Stop auto-scrolling
+                                    autoScrollInterval = null; // Set auto-scroll interval to null
+                                    autoScrollPaused = true; // Pause auto-scrolling
+                                    setTimeout(function () {
+                                        autoScrollPaused = false; // Resume auto-scrolling after a short delay
+                                        startAutoScroll();
+                                    }, 1000); // Adjust the delay here (in milliseconds)
+                                });
+                            }
+                        
+                            // Call manualScroll function when the document is loaded
+                            document.addEventListener('DOMContentLoaded', function () {
+                                var carousel = document.getElementById('carouselExampleDark');
+                                carouselInstance = new bootstrap.Carousel(carousel, { ride: false });
+                        
+                                // Start auto-scrolling
+                                startAutoScroll();
+                        
+                                // Call manualScroll function to handle manual slide change
+                                manualScroll();
+                            });
+                        </script>
                     </div>
+                </div>
             </div>
         </div>
+        
+        <script>
+            // Add this script to your HTML file to control the carousel manually
+            document.addEventListener('DOMContentLoaded', function () {
+                var myCarousel = document.getElementById('carouselExampleDark');
+                var carousel = new bootstrap.Carousel(myCarousel);
+            });
+        </script>
+        
+        <br><br>
+
+<div class="section">
+
+    <div class="main-container">
+    
+    <div class="container-large align-center">
+    </div>
+    
+    <div class="partner-logos-container ml-5">
+        <div class="logo-row">
+            <img src="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8cac85ba1a556c8fa0_MS_Startups_Celebration_Badge_Light.png" alt="Microsoft for Startups" width="150" height="Auto" class="partner-logo">
+            <img src="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo.png" alt="Google Cloud for Startups" sizes="(max-width: 479px) 27vw, (max-width: 767px) 45vw, (max-width: 991px) 37vw, 22vw" srcset="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo-p-500.png 500w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo.png 600w" class="partner-logo">
+            <img src="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate.webp" alt="AWS Activate" sizes="(max-width: 479px) 27vw, (max-width: 767px) 45vw, (max-width: 991px) 37vw, 22vw" srcset="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate-p-500.webp 500w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate-p-800.webp 800w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate.webp 1024w" class="partner-logo">
+            <img src="https://insights.virti.com/content/images/size/w2000/2021/09/20181218-Nvidia-Inception.png" alt="Nvidia Inception" width="150" srcset="https://insights.virti.com/content/images/size/w2000/2021/09/20181218-Nvidia-Inception.png" class="partner-logo">
+        </div>
+    </div>
+    
+    </div>
+    </div>
     </section>
     <!-- Services  -->
     <section class="-py-5 Services">
@@ -471,7 +550,7 @@ p {
                         <h5 style="font-size: 28px">Nyun Zero is a No-code, Super user-friendly, 360-degree efficiency AI-driven suite.</h5>
                         <p class="jk">Nyun Zero provides a seamless and hassle-free entry point to the world of Artificial Intelligence, whether you're a seasoned pro or just starting out. It encompasses multiple frameworks for deep learning models and is flexible in terms of deployment on multiple devices. You can swiftly implement AI solutions within your organization, empowering your team to leverage the full potential of AI in solving complex problems and driving innovation.</p>
                         <div class="mt-5 complex">
-                            <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='https://zero.nyunai.com'">EXPLORE</button>
+                            <button type="button" class="btn kl btn-outline-secondary" onclick="window.location.href='https://zero.nyunai.com'">EXPLORE</button>
                         </div>
                     </div>
                 </div>
@@ -498,12 +577,12 @@ p {
                         <li> Efficient Deployment with Nyun Zero
                         </li>
                     </ul>
-                    <button developing="" type="button" class="btn btn-success">Hamess the power of Nyun Adapt</button>
+                    <button developing="" type="button" class="btn kl btn-success">Hamess the power of Nyun Adapt</button>
                 </div>
                 
             </div>
         </div>
-        <div class="col-md-6 col-lg-5 col-xl-4">
+        <div class="col-md-6 col-lg-5 col-xl-4 ">
             <div class="misn-block lc-block h-misn-block">
                 <div class="lc-block">
  <img class="img-fluid" src="assets/images/compressd.png">
@@ -519,7 +598,7 @@ p {
                         <li> Easily deployable through Nyun Zero platform
                         </li>
                     </ul>
-                    <button developing="" type="button" class="btn btn-success px-5">Discover Nyun Kompress</button>
+                    <button developing="" type="button" class="btn kl btn-success px-5">Discover Nyun Kompress</button>
                 </div>
                 
             </div>
@@ -611,7 +690,7 @@ p {
             <div class="row">
                 <!-- Grid column -->
                 <div class="col-lg-4 col-md-4 col-sm-4 mb-4 mb-md-0 wow zoomIn" data-wow-delay="0.3s"
-                    style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn; margin-left:-5%;margin-right: 5%;">
+                    style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn; margin-left:7%;margin-right: 5%;">
                     <img src="assets/images/footer-logo.svg" class="w-100 pb-5">
                     <p class="mt-4 pb-2">The trailblazers in unleashing the true potential of your business through our
                         cutting-edge AI solutions using lean, efficient, and super-fast deep learning models</p>
@@ -629,7 +708,7 @@ p {
                         <li><a href="./coming.html" class="">Demo</a></li>
                         <li><a href="./coming.html" class="">About</a></li>
                         <li><a href="./coming.html" class="">Services</a></li>
-                        <li><a href="./coming.html" class="">Products</a></li>
+                  
                     </ul>
                 </div>
                 <!-- Grid column -->
@@ -649,23 +728,24 @@ p {
                 <!-- Grid column -->
     
                 <!-- Grid column -->
-                <div class="col-sm-4 col-md-3 col-lg-2 mb-4 mb-md-0 wow zoomIn" data-wow-delay="0.3s"
-                    style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
+                <div class="col-sm-4 col-md-3 col-lg-2 mb-4 mb-md-0 wow zoomIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
                     <h5 class="text-uppercase mb-4">SOCIAL</h5>
-    
+                
                     <ul class="list-unstyled mb-0">
                         <li><a href="https://in.linkedin.com/company/nyunai?trk=public_profile_experience-item_profile-section-card_image-click" class="text-white"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                         <li><a href="#" class="text-white"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         <li><a href="#" class="text-white"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="mailto:contact@nyunai.com" class="text-white"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
+                
                 <!-- Grid column -->
     
                 <!-- Grid column -->
-                <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-0 -ml-24">
+                <!-- <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-0 -ml-24">
                     <h5 class="text-uppercase mb-4">CONTACT</h5>
                     <p>contact@nyunai.com</p>
-                </div>
+                </div> -->
                 <!-- Grid column -->
                 
                 <!-- Grid column -->
@@ -693,12 +773,13 @@ p {
     <script src="assets/lib/wow/wow.min.js"></script>
     <script src="assets/lib/counterup/counterup.min.js"></script>
     <script src="assets/lib/superfish/superfish.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
 
 </body>
 
 </html>
+
 
 <script>
     (function () {

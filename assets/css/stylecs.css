@@ -690,12 +690,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: opacity .6s ease;
   border-radius: 50%;
 }
-
+@media (min-width:600px){
 .carousel-control-next {
-  right: 52px;
-  top: 116%;
+  margin-right: -55px;
+ 
 }
+}
+@media (max-width:599px){
+  .carousel-control-next,
+  .carousel-control-prev {
+    margin:0 -10%;
+  } 
 
+}
 #hero p {
   text-align: center;
 }
@@ -767,7 +774,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .Services {
-  background-color: #01396C;
+  background-color: black;
   padding-bottom: 0px !important;
 }
 

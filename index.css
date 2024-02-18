@@ -1,3 +1,35 @@
 .jk{
-width:30%;
+width:100%;
+}
+.lc-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.misn-block {
+    height: 100%;
+}
+
+.heading {
+    flex-grow: 1;
+   min-height: 190px; /* Set a minimum height for the heading */
+}
+.kl{
+    margin-top: auto;
+}
+.partner-logos-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 20px; /* Adding some padding at the bottom to ensure scrollbar visibility */
+}
+
+.logo-row {
+    margin-right: 20px; /* Adding space between logos */
+    display: inline-block;
+}
+
+.partner-logo {
+    margin-right: 150px; /* Adding space between logos */
 }
