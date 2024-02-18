@@ -284,11 +284,12 @@ p {
                             var carouselInstance; // Variable to hold the carousel instance
                             var autoScrollInterval = null; // Variable to hold the auto-scroll interval
                             var autoScrollPaused = false; // Variable to track if auto-scrolling is paused
+                            var manualScrolling = false; // Variable to track if manual scrolling is in progress
                             var startX = 0; // Variable to store the initial mouse position
                         
                             // Function to start auto-scrolling
                             function startAutoScroll() {
-                                if (autoScrollInterval === null && !autoScrollPaused) {
+                                if (autoScrollInterval === null && !autoScrollPaused && !manualScrolling) {
                                     autoScrollInterval = setInterval(function () {
                                         carouselInstance.next(); // Move to the next slide
                                     }, 2000); // Change the interval here (in milliseconds)
@@ -299,6 +300,7 @@ p {
                             function manualScroll() {
                                 $('#carouselExampleDark').on('mousedown', function(e) {
                                     startX = e.clientX; // Store the initial mouse position
+                                    manualScrolling = true; // Set manual scrolling to true
                                 });
                         
                                 $('#carouselExampleDark').on('mouseup', function(e) {
@@ -318,6 +320,8 @@ p {
                                         autoScrollPaused = false; // Resume auto-scrolling after a short delay
                                         startAutoScroll();
                                     }, 1000); // Adjust the delay here (in milliseconds)
+                        
+                                    manualScrolling = false; // Set manual scrolling to false
                                 });
                             }
                         
@@ -333,6 +337,7 @@ p {
                                 manualScroll();
                             });
                         </script>
+                        
                     </div>
                 </div>
             </div>
