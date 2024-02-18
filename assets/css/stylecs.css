@@ -981,6 +981,7 @@ ul li {
   font-weight: 500;
   border: 2px solid;
   border-radius: 23px;
+  
 }
 
 .privacy h5 {
@@ -994,6 +995,7 @@ p {
 
 .privacy {
   background-color: #106B50;
+
 }
 
 .un-lock .btn-primary {
