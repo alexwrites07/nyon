@@ -370,7 +370,7 @@ p {
         </div>
     </div>
     <style>
-        .containerr {
+    .containerr {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -390,14 +390,9 @@ p {
             max-height: 300px; /* Set maximum height for both images */
             object-fit: contain; /* Prevent stretching of images */
         }
-        .options-container {
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+      
     .options-buttons {
-        width: 100%; /* Make buttons container full width */
+        width: 70%; /* Make buttons container full width */
         display: flex;
         justify-content: center; /* Center buttons horizontally */
         margin-top: 10px; /* Adjust top margin */
@@ -418,7 +413,29 @@ p {
         color: #192A39; /* Hover text color */
     }
 
-    
+    .loading-text {
+        text-align: center;
+        width: 100%; /* Full width */
+        display: none;
+        margin-right:-20%;
+    }
+    .preloader {
+       
+        display: none; /* Initially hide preloader */
+        position: relative;
+            left:-50%;
+            top:-50%;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .options-container {
+       
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
     @media screen and (max-width: 700px) {
         .fixed-image,
         .dynamic-image {
@@ -430,7 +447,8 @@ p {
            
         }
         .options-container {
-            width: 100%; /* Make options container full width */
+            width:20%; /* Make options container full width */
+         
         }
     }
     </style>
@@ -441,23 +459,52 @@ p {
     <div class="containerr">
         <div class="images-container">
             <img src="./assets/images/Group 94 2.svg" alt="First Image" class="fixed-image">
-            
+            <div class="options-container">
+                <div id="preloader" class="preloader"></div>
+                <p id="loadingText" class="loading-text">Loading...</p>
+            </div>
             <img src="./assets/images/post6.png" alt="Second Image" class="dynamic-image" id="dynamicImage">
+            
+            <!-- <img src="./assets/images/post6.png" alt="Second Image" class="dynamic-image" id="dynamicImage"> -->
         </div>
         <div class="options-buttons">
+            <div class="options-container">
+                <div id="preloader" class="preloader"></div>
+                <p id="loadingText" class="loading-text">Loading...</p>
+            </div>
             <button onclick="changeImage('./assets/images/post3.svg')">YoloV8/RT-Detr</button>
             <button onclick="changeImage('./assets/images/post2.svg')">VanillaNet</button>
             <button onclick="changeImage('./assets/images/post4.svg')">Llama-7B</button>
+            
             <button onclick="changeImage('./assets/images/post5.svg')">Stable-Diffusion</button>
             <button onclick="changeImage('./assets/images/post6.svg')">BERT</button>
             <!-- Add more buttons as needed -->
         </div>
     </div>
-    </div>
     
     <script>
         function changeImage(imageUrl) {
-            document.getElementById('dynamicImage').src = imageUrl;
+            var preloader = document.getElementById('preloader');
+            var loadingText = document.getElementById('loadingText');
+            
+            preloader.style.display = 'block'; // Show preloader
+            loadingText.style.display = 'block'; // Show loading text
+            
+            var img = document.createElement('img');
+            img.onload = function() {
+                preloader.style.display = 'none'; // Hide preloader once the image is loaded
+                loadingText.style.display = 'none'; // Hide loading text once the image is loaded
+            };
+            img.src = imageUrl;
+            img.className = 'dynamic-image';
+            
+            var container = document.querySelector('.images-container');
+            var existingImage = document.querySelector('.dynamic-image');
+            if (existingImage) {
+                container.replaceChild(img, existingImage);
+            } else {
+                container.appendChild(img);
+            }
         }
     </script>
     
