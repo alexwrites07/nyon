@@ -2195,7 +2195,13 @@ p {
     margin-top: 8px;
   }
 }
-
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
     @media (max-width: 575.98px) {
         .cover img {
       width: 100% !important;
