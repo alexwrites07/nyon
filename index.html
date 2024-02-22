@@ -150,6 +150,7 @@ p {
                     </li>
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -368,6 +369,97 @@ p {
             <img src="https://insights.virti.com/content/images/size/w2000/2021/09/20181218-Nvidia-Inception.png" alt="Nvidia Inception" width="150" srcset="https://insights.virti.com/content/images/size/w2000/2021/09/20181218-Nvidia-Inception.png" class="partner-logo">
         </div>
     </div>
+    <style>
+        .containerr {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .images-container {
+            width: 80%; /* Adjust width of the container */
+            display: flex;
+            margin-left: 30px;
+            /* justify-content: space-between; */
+            align-items: flex-start;
+            margin-bottom: 20px; /* Adjust margin between images and buttons */
+        }
+        .fixed-image,
+        .dynamic-image {
+            width: 45%; /* Adjust width of images */
+            height: auto; /* Allow height to adjust automatically */
+            max-height: 300px; /* Set maximum height for both images */
+            object-fit: contain; /* Prevent stretching of images */
+        }
+        .options-container {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .options-buttons {
+        width: 100%; /* Make buttons container full width */
+        display: flex;
+        justify-content: center; /* Center buttons horizontally */
+        margin-top: 10px; /* Adjust top margin */
+        flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    }
+    .options-buttons button {
+        margin: 5px; /* Adjust spacing between buttons */
+        color: #ffffff; /* Text color */
+        background-color: #192A39; /* Background color */
+        border-radius: 20px; /* Rounded corners */
+        border: 2px solid #192A39; /* Border color */
+        padding: 8px 16px; /* Padding */
+        font-size: 14px; /* Font size */
+        cursor: pointer; /* Cursor style */
+    }
+    .options-buttons button:hover {
+        background-color: #ffffff; /* Hover background color */
+        color: #192A39; /* Hover text color */
+    }
+
+    
+    @media screen and (max-width: 700px) {
+        .fixed-image,
+        .dynamic-image {
+            width: 100%; /* Images take full width on smaller screens */
+            margin-top: 40px;
+        }
+        .images-container {
+            flex-direction: column; /* Stack images vertically */
+           
+        }
+        .options-container {
+            width: 100%; /* Make options container full width */
+        }
+    }
+    </style>
+    
+    </head>
+    <body>
+    <br><br> <br><br>
+    <div class="containerr">
+        <div class="images-container">
+            <img src="./assets/images/Group 94 2.svg" alt="First Image" class="fixed-image">
+            
+            <img src="./assets/images/post6.png" alt="Second Image" class="dynamic-image" id="dynamicImage">
+        </div>
+        <div class="options-buttons">
+            <button onclick="changeImage('./assets/images/post3.png')">YoloV8/RT-Detr</button>
+            <button onclick="changeImage('./assets/images/post2.svg')">VanillaNet</button>
+            <button onclick="changeImage('./assets/images/post4.png')">Llama-7B</button>
+            <button onclick="changeImage('./assets/images/post5.png')">Stable-Diffusion</button>
+            <button onclick="changeImage('./assets/images/post6.png')">BERT</button>
+            <!-- Add more buttons as needed -->
+        </div>
+    </div>
+    </div>
+    
+    <script>
+        function changeImage(imageUrl) {
+            document.getElementById('dynamicImage').src = imageUrl;
+        }
+    </script>
     
     </div>
     </div>

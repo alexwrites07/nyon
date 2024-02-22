@@ -31,7 +31,10 @@ width:100%;
     scrollbar-width: none; /* Hide scrollbar in Firefox */
     -ms-overflow-style: none;
     padding-bottom: 20px; /* Adding some padding at the bottom to ensure scrollbar visibility */
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.5) 40%, rgba(255,255,255,0) 100%);
+    padding: 20px;
 }
+
 
 .logo-row {
     margin-right: 20px; /* Adding space between logos */
