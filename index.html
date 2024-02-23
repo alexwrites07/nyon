@@ -109,10 +109,47 @@ p {
 
   gtag('config', 'G-V2HJ2YR57S');
 </script>
+<style>
+    /* Your CSS styles here */
+    .menu {
+        list-style-type: none;
+        padding: 0;
+    }
+    .menu li {
+        position: relative;
+        float: left;
+        margin-right: 20px;
+    }
+    .menu li a {
+        color: #333;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+    }
+    .menu li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #f9f9f9;
+        padding: 0;
+    }
+    .menu li:hover ul {
+        display: block;
+    }
+    .menu li ul li {
+        float: none;
+        width: 200px;
+    }
+    .menu li ul li a {
+        padding: 10px;
+    }
+    </style>
 </head>
 
 <body>
 
+  
     <header id="header">
         <div class="container">
             <div id="logo" class="pull-left">
@@ -121,14 +158,13 @@ p {
     
             <nav id="nav-menu-container">
                 <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
-                    <li class="menu-has-children"><a href="javascript:void(0)" class="sf-with-ul">Products</a>
-                        <ul class="bg-dark" style="display: none;">
+                    <li class="menu-has-children"><a href="#" class="sf-with-ul">Products</a>
+                        <ul>
                             <li><a href="#nyunaizero">N-zero</a></li>
-                               <li><a href="#nyunkompress">N-kompress</a></li>
-                               <li><a href="#nyunadapt">N-adapt</a></li>
-                               <li><a href="#ntrack">N-track</a></li>
-   
-                           </ul>
+                            <li><a href="#nyunkompress">N-kompress</a></li>
+                            <li><a href="#nyunadapt">N-adapt</a></li>
+                            <li><a href="#ntrack">N-track</a></li>
+                        </ul>
                     </li>
                     <!-- <li class="menu-has-children"><a href="javascript:void(0)" class="sf-with-ul">Services</a>
                         <ul style="display: none;">
@@ -139,24 +175,42 @@ p {
                             <li><a href="<?php echo base_url('contact');?>">Enabling to switch from cloud to edge</a></li>
                         </ul>
                     </li> -->
-                    <li class="menu-has-children"><a href="javascript:void(0)" class="sf-with-ul">Services</a>
-                        <ul style="display: none;">
-                            <li><a href="./coming.html">Developing use case-specific models</a></li>
-                            <li><a href="./coming.html">Compressing your existing Models</a></li>
-                            <li><a href="./coming.html">Training LLMs on your data</a></li>
-                            <li><a href="./coming.html">Improving Inference speeds</a></li>
-                            <li><a href="./coming.html">Enabling to switch from cloud to edge</a></li>
-                        </ul>
-                    </li>
+                
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="contact-us.html">Contact Us</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="coming.html">Blog</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    
+    <script>
+        // JavaScript to toggle visibility of submenu
+        document.addEventListener("DOMContentLoaded", function() {
+            var menuItems = document.querySelectorAll('.menu-has-children');
+            menuItems.forEach(function(item) {
+                item.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    var submenu = this.querySelector('ul');
+                    if (submenu.style.display === 'none' || submenu.style.display === '') {
+                        submenu.style.display = 'block';
+                    } else {
+                        submenu.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(event) {
+                var menu = document.querySelector('.menu');
+                if (!menu.contains(event.target)) {
+                    var submenus = document.querySelectorAll('.menu-has-children ul');
+                    submenus.forEach(function(submenu) {
+                        submenu.style.display = 'none';
+                    });
+                }
+            });
+        });
+        </script>
   <section class="banners ">
   </section><section class="banners py-5">
     </section>
@@ -192,12 +246,18 @@ p {
                             Whether it's <span> optimizing performance, or accelerating inference speeds, we've got
                                 you covered.
                         </span></p>
-                        <div class="container">
+                        <style>
+                            .kk{
+                                height:400px;
+                            }
+                            
+                        </style>
+                        <div class="container ">
                             <div class="row">
-                                <div class="col-lg-12 col-sm-12 col-md-12">
+                                <div class="col-lg-12 col-sm-12 col-md-12 ">
                                     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="false">
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
+                                            <div class="carousel-item active kk">
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-lg-11">
@@ -213,7 +273,7 @@ p {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item">
+                                            <div class="carousel-item kk">
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-lg-11">
@@ -230,22 +290,20 @@ p {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item">
+                                            <div class="carousel-item kk">
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-lg-11">
                                                             <div class="nyunai">
-                                                                <p>Training CNNs on very large images using a single
-                                                                    GPU, a task that was previously impossible, with
-                                                                    patchGD, <span>NeurIPS 2023*</span></p>
-                                                                <button type="button" class="btn btn-light w-100"><img
+                                                                <p>Training CNNs on large images on single GPU, once impossible, with patchGD. <span>NeurIPS 2023*</span></p>
+                                                                <button type="button" class="btn btn-light w-100 "><img
                                                                         src="assets/images/ne1.png"></button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="carousel-item">
+                                            <div class="carousel-item kk">
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-lg-11">
@@ -361,7 +419,7 @@ p {
     <div class="container-large align-center">
     </div>
     
-    <div class="partner-logos-container ml-5">
+    <div class="partner-logos-containerr partner-logos-container  ml-5">
         <div class="logo-row">
             <img src="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8cac85ba1a556c8fa0_MS_Startups_Celebration_Badge_Light.png" alt="Microsoft for Startups" width="150" height="Auto" class="partner-logo">
             <img src="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo.png" alt="Google Cloud for Startups" sizes="(max-width: 479px) 27vw, (max-width: 767px) 45vw, (max-width: 1591px) 28vw, 12vw" srcset="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo-p-500.png 500w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo.png 600w" class="partner-logo">
@@ -369,7 +427,31 @@ p {
             <img src="https://insights.virti.com/content/images/size/w2000/2021/09/20181218-Nvidia-Inception.png" alt="Nvidia Inception" width="150" srcset="https://insights.virti.com/content/images/size/w2000/2021/09/20181218-Nvidia-Inception.png" class="partner-logo">
         </div>
     </div>
+    
     <style>
+        .partner-logos-containerr {
+    overflow: hidden;
+}
+
+.logo-row {
+    display: flex;
+    animation: scroll 20s infinite linear;
+   
+}
+
+.partner-logo {
+    margin:0 70px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
     .containerr {
             display: flex;
             flex-direction: column;
@@ -452,6 +534,13 @@ p {
         }
     }
     </style>
+    <script>
+
+const logoRow = document.querySelector('.logo-row');
+const originalLogos = logoRow.innerHTML;
+logoRow.innerHTML += originalLogos;
+
+    </script>
     
     </head>
     <body>
@@ -470,7 +559,7 @@ p {
         <div class="options-buttons">
             <div class="options-container">
                 <div id="preloader" class="preloader"></div>
-                <p id="loadingText" class="loading-text">Loading...</p>
+                <!-- <p id="loadingText" class="loading-text">Loading...</p> -->
             </div>
             <button onclick="changeImage('./assets/images/post3.svg')">YoloV8/RT-Detr</button>
             <button onclick="changeImage('./assets/images/post2.svg')">VanillaNet</button>
@@ -537,27 +626,8 @@ p {
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-sm-6  col-md-6 i  ">
-                        <div class="abc">
-                            <div class="c text-center">
-                                <div class="wrap pb-3">
-                                    <img src="assets/images/icon-2.svg" class="img-fluid">
-                                    <div class="info">
-                                        <h4 class="position ml-4">Get up to <span>6x</span> inference<br>
-                                            speeds on same devices </h4>
-                                    </div>
-                                </div>
-                                <div class="more">
-                                    <p>Our deep learning models are engineered for unrivaled inference speeds,<br>
-                                        enhancing
-                                        user experiences and enabling seamless follow-up tasks, particularly<br> in
-                                        critical
-                                        applications like autonomous driving and object detection.</p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    
                     <div class="col-lg-6 col-sm-6  col-md-6 i  ">
                         <div class="abc">
                             <div class="c text-center">
@@ -574,6 +644,28 @@ p {
                                         <br>broader
                                         audience.
                                     </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="col-lg-6 col-sm-6  col-md-6 i save">
+                        <div class="abc">
+                            <div class="c text-center">
+                                <div class="wrap pb-3">
+                                    <img src="assets/images/icon-2.svg" class="img-fluid -mt-24">
+                                    <div class="info">
+                                        <h4 class="position ml-4">Get up to <span>6x</span> inference<br>
+                                            speeds on same devices </h4>
+                                    </div>
+                                </div>
+                                <div class="more">
+                                    <p>Our deep learning models are engineered for unrivaled inference speeds,<br>
+                                        enhancing
+                                        user experiences and enabling seamless follow-up tasks, particularly<br> in
+                                        critical
+                                        applications like autonomous driving and object detection.</p>
 
                                 </div>
                             </div>
@@ -778,9 +870,9 @@ p {
         </div>
 
     </section>
-  
+
     <!-- Mobile View -->
-    <div class="bg-black">
+    <div class="bg-black">  <br><br>
     <div class="container">
     <section class="privacy py-5">
         <div class="container mt-3">
@@ -811,7 +903,7 @@ p {
             </div>
         </div>
     </section></div></div>
-    <div class="bg-black">
+    <div class="bg-black"><br><br>
         <div class="container">
     <section class="journey py-5 ">
         <div class="container pb-5">
@@ -824,7 +916,7 @@ p {
                         into how our
                         solutions can revolutionize your business.
                     </p>
-                    <div class="mt-5">
+                    <div class="mt-2">
                     <!-- <a href="<?php echo base_url('contact');?>"> <button Developing type="button"  class="btn btn-success px-5">&nbsp;&nbsp; Schedule a Call
                             &nbsp;&nbsp;</button></a> -->
                             <a href="./coming.html"> <button Developing type="button"  class="btn btn-success px-5">&nbsp;&nbsp; Schedule a Call
@@ -834,7 +926,7 @@ p {
             </div>
         </div>
     </section></div></div>
-    
+
     <footer class="bg-dark text-white text-lg-start py-5">
         <!-- Grid container -->
         <div class="container p-4">
@@ -859,7 +951,7 @@ p {
                         <li><a href="./coming.html" class="">Support</a></li>
                         <li><a href="./coming.html" class="">Demo</a></li>
                         <li><a href="./coming.html" class="">About</a></li>
-                        <li><a href="./coming.html" class="">Services</a></li>
+                      
                   
                     </ul>
                 </div>
@@ -885,7 +977,7 @@ p {
                 
                     <ul class="list-unstyled mb-0">
                         <li><a href="https://in.linkedin.com/company/nyunai?trk=public_profile_experience-item_profile-section-card_image-click" class="text-white"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a href="#" class="text-white"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                       
                         <li><a href="#" class="text-white"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                         <li><a href="mailto:contact@nyunai.com" class="text-white"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
                     </ul>
