@@ -178,7 +178,7 @@ p {
                 
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="contact-us.html">Contact Us</a></li>
-                    <li><a href="coming.html">Blog</a></li>
+                    <li><a href="./new_blog.html">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -419,29 +419,55 @@ p {
     <div class="container-large align-center">
     </div>
     
-    <div class="partner-logos-containerr partner-logos-container  ml-5">
-        <div class="logo-row">
+    <div class="partner-logos-container ml-5">
+        <div class="logo-row" id="logoRow">
             <img src="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8cac85ba1a556c8fa0_MS_Startups_Celebration_Badge_Light.png" alt="Microsoft for Startups" width="150" height="Auto" class="partner-logo">
             <img src="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo.png" alt="Google Cloud for Startups" sizes="(max-width: 479px) 27vw, (max-width: 767px) 45vw, (max-width: 1591px) 28vw, 12vw" srcset="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo-p-500.png 500w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo.png 600w" class="partner-logo">
-            <img src="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate.webp" alt="AWS Activate" sizes="(max-width: 479px) 27vw, (max-width: 767px) 45vw, (max-width: 991px) 37vw, 12vw" srcset="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate-p-500.webp 500w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate-p-800.webp 800w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate.webp 1024w" class="partner-logo">
+            <img src="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate.webp" alt="AWS Activate" sizes="(max-width: 479px) 27vw, (max-width: 767px) 45vw, (max-width: 991px) 37vw, 22vw" srcset="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate-p-500.webp 500w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate-p-800.webp 800w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate.webp 1024w" class="partner-logo">
             <img src="https://insights.virti.com/content/images/size/w2000/2021/09/20181218-Nvidia-Inception.png" alt="Nvidia Inception" width="150" srcset="https://insights.virti.com/content/images/size/w2000/2021/09/20181218-Nvidia-Inception.png" class="partner-logo">
         </div>
     </div>
+
+
+
+    <script>
+        window.onload = function() {
+            const logoContainer = document.querySelector('.partner-logos-container');
+            const logoRow = document.querySelector('.logo-row');
+            const clone = logoRow.cloneNode(true); // Clone the logo row
+    
+            // Append the clone to the container
+            logoContainer.appendChild(clone);
+    
+            // Start scrolling immediately
+            setInterval(scrollLogos, 20); // Adjust scrolling speed as needed
+    
+            // Function to continuously shift the position of the logos container
+            function scrollLogos() {
+                // Clone the logo row again if needed to ensure seamless scrolling
+                if (logoContainer.scrollLeft >= logoRow.offsetWidth) {
+                    logoContainer.scrollLeft = 0;
+                } else {
+                    logoContainer.scrollLeft++;
+                }
+            }
+        };
+    </script>
+    
+
+
     
     <style>
-        .partner-logos-containerr {
+.partner-logos-container {
     overflow: hidden;
 }
 
 .logo-row {
-    display: flex;
-    animation: scroll 20s infinite linear;
-   
+    white-space: nowrap;
+    animation: scroll 40s linear infinite;
 }
 
-.partner-logo {
-    margin:0 70px;
-}
+
 
 @keyframes scroll {
     0% {
@@ -451,6 +477,9 @@ p {
         transform: translateX(-100%);
     }
 }
+
+
+
 
     .containerr {
             display: flex;
@@ -474,7 +503,7 @@ p {
         }
       
     .options-buttons {
-        width: 70%; /* Make buttons container full width */
+        width:100%;
         display: flex;
         justify-content: center; /* Center buttons horizontally */
         margin-top: 10px; /* Adjust top margin */
@@ -489,10 +518,12 @@ p {
         padding: 8px 16px; /* Padding */
         font-size: 14px; /* Font size */
         cursor: pointer; /* Cursor style */
+        height:50px;
     }
     .options-buttons button:hover {
         background-color: #ffffff; /* Hover background color */
         color: #192A39; /* Hover text color */
+      
     }
 
     .loading-text {
@@ -530,21 +561,186 @@ p {
         }
         .options-container {
             width:20%; /* Make options container full width */
+            height:50px;
          
         }
     }
     </style>
     <script>
 
-const logoRow = document.querySelector('.logo-row');
-const originalLogos = logoRow.innerHTML;
-logoRow.innerHTML += originalLogos;
+
+
+
 
     </script>
-    
+  <style>
+    .bar-section {
+        text-align: center;
+    }
+
+    .options-buttons {
+        text-align: center;
+       
+    }
+
+    .bar-container {
+        width: 200px;
+        height: 60px; /* Adjust height as needed */
+        margin-top: 10px; /* Center the bar containers */
+        margin-left: 20%;
+
+    }
+
+    .bar-title {
+        position: relative;
+        top:-550%;
+        color:white;
+        font-size:18px;
+        margin-left:120%;
+        margin-right: -90%;
+     
+    }
+    .pl {
+    font-size: 25px;
+    position: relative;
+    top: -545%;
+    color: white;
+    text-align: center;
+    position: relative;
+    left:140%;
+   
+}
+
+    .bart-title {
+        position: relative;
+        top:-545%;
+        color:white;
+     margin-top: -10%;
+        margin-left:100%;
+        margin-right: -90%;
+     
+    }
+    .plp {
+       color:#449DD1;
+       margin-left: 110%;
+       font-size:11px;
+       
+    }
+    .bar {
+        position: relative;
+        top:-190%;
+        width: calc(100% - 20px); /* Adjust width to leave space for values */
+        height: 35px; /* Adjust height as needed */
+        background: var(--Linear, linear-gradient(90deg, #013A98 0%, #449DD1 100%));;
+        margin-top: -48%;
+        margin-left:120%;
+        animation: fillBar 1s ease-in-out forwards; /* Animation for filling bars */
+    }
+
+    .bar-value {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 110%;
+        color: white;
+        opacity: 1; /* Initially hide */
+        
+    }
+    .bar-text {
+    color: white;
+    animation: appear 4s ease forwards;
+    opacity: 0;
+    font-size: 9px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+    @keyframes fillBar {
+        from { width: 0; }
+    }
+</style>
     </head>
     <body>
     <br><br> <br><br>
+    <div class="bar-section">
+        <div id="preloader" class="preloader"></div>
+        <!-- <p id="loadingText" class="loading-text">Loading...</p> -->
+        
+        <!-- Add more buttons as needed -->
+    </div>
+
+
+
+    <script>
+        function changeBars(option) {
+            // Hide all bar containers
+            var barContainers = document.querySelectorAll('.bar-container');
+            barContainers.forEach(function(container) {
+                container.style.display = 'none';
+            });
+
+            // Reset all bars to initial width and clear values
+            var bars = document.querySelectorAll('.bar');
+            bars.forEach(function(bar) {
+                bar.style.width = 'calc(100% - 20px)';
+                document.getElementById(bar.id + '-value').innerText = '';
+            });
+
+            // Adjust bars according to the selected option
+            switch(option) {
+                case 'YoloV8/RT-Detr':
+                    document.getElementById('bar1').style.width = '2.6x';
+                    document.getElementById('bar1-value').innerText = '3.6x';
+              
+                    document.getElementById('bar2').style.width = '70%';
+                    document.getElementById('bar2-value').innerText = '10.2x';
+                    document.getElementById('bar12').style.width = '70%';
+                    document.getElementById('bar12-value').innerText = '70%';
+                    document.getElementById('bar-container-1').style.display = 'block'; // Display the corresponding bar container
+                    break;
+                case 'VanillaNet':
+                    document.getElementById('bar3').style.width = '30%';
+                    document.getElementById('bar3-value').innerText = '30%';
+                
+                    document.getElementById('bar4').style.width = '80%';
+                    document.getElementById('bar4-value').innerText = '80%';
+                    document.getElementById('bar-container-2').style.display = 'block'; // Display the corresponding bar container
+                    break;
+                    case 'Llama-7B':
+                    document.getElementById('bar3').style.width = '30%';
+                    document.getElementById('bar3-value').innerText = '30%';
+                
+                    document.getElementById('bar4').style.width = '80%';
+                    document.getElementById('bar4-value').innerText = '80%';
+                    document.getElementById('bar-container-2').style.display = 'block'; // Display the corresponding bar container
+                    break;
+                    case 'Stable-Diffusion':
+                    document.getElementById('bar3').style.width = '30%';
+                    document.getElementById('bar3-value').innerText = '30%';
+                
+                    document.getElementById('bar4').style.width = '80%';
+                    document.getElementById('bar4-value').innerText = '80%';
+                    document.getElementById('bar-container-2').style.display = 'block'; // Display the corresponding bar container
+                    break;
+                    case 'BERT':
+                    document.getElementById('bar3').style.width = '30%';
+                    document.getElementById('bar3-value').innerText = '30%';
+                
+                    document.getElementById('bar4').style.width = '80%';
+                    document.getElementById('bar4-value').innerText = '80%';
+                    document.getElementById('bar-container-2').style.display = 'block'; // Display the corresponding bar container
+                    break;
+                // Add cases for other options
+            }
+        }
+    </script>
     <div class="container">
         <div class="images-container">
             <img src="./assets/images/Group 94 2.svg" alt="First Image" class="fixed-image">
@@ -552,23 +748,195 @@ logoRow.innerHTML += originalLogos;
                 <div id="preloader" class="preloader"></div>
                 <p id="loadingText" class="loading-text">Loading...</p>
             </div>
-            <img src="./assets/images/post6.png" alt="Second Image" class="dynamic-image" id="dynamicImage">
+            <!-- <img src="./assets/images/post6.png" alt="Second Image" class="dynamic-image" id="dynamicImage"> -->
             
             <!-- <img src="./assets/images/post6.png" alt="Second Image" class="dynamic-image" id="dynamicImage"> -->
         </div>
         <div class="options-buttons">
+           
+           
+            <!-- Add more buttons as needed -->
+    
+            <div class="bar-container" id="bar-container-1" style="display: none;">
+                <p class=" pl">YoloV8/RT-Detr</p>
+                <p class="bart-title">(Segmentation)</p>
+                <p class="bart-title plp">Tested on GPU-L4 devices</p>
+                <div class="bar" id="bar12">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar12-value">3.6x</span>
+                    <span class="bar-text">Energy Savings</span>
+                </div>
+                <div class="bar" id="bar2">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar2-value">70%</span>
+                    <span class="bar-text">Memory Savings</span>
+                </div>
+               
+                <div class="bar" id="bar1">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar1-value">3.6x</span>
+                    <span class="bar-text">Latency  Speedup</span>
+                </div>
+                
+               
+            </div>
+    
+            <div class="bar-container" id="bar-container-2" style="display: none;">
+                <p class="pl ">VanillaNet</p>
+                <p class="bart-title">(Segmentation)</p>
+                <p class="bart-title plp">Tested on GPU-L4 devices</p>
+                <div class="bar" id="bar34">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar34-value">3.6x</span>
+                    <span class="bar-text">Energy Savings</span>
+                </div>
+                <div class="bar" id="bar4">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar4-value">70%</span>
+                    <span class="bar-text">Memory Savings</span>
+                </div>
+               
+                <div class="bar" id="bar3">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar3-value">3.6x</span>
+                    <span class="bar-text">Latency  Speedup</span>
+                </div>
+            </div>
+            <div class="bar-container" id="bar-container-3" style="display: none;">
+                <p class="pl ">Llama-7B</p>
+                <p class="bart-title">(Segmentation)</p>
+                <p class="bart-title plp">Tested on GPU-L4 devices</p>
+                <div class="bar" id="bar56">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar56-value">3.6x</span>
+                    <span class="bar-text">Energy Savings</span>
+                </div>
+                <div class="bar" id="bar6">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar6-value">70%</span>
+                    <span class="bar-text">Memory Savings</span>
+                </div>
+               
+                <div class="bar" id="bar5">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar5-value">3.6x</span>
+                    <span class="bar-text">Latency  Speedup</span>
+                </div>
+            </div>
+            <div class="bar-container" id="bar-container-4" style="display: none;">
+                <p class="pl ">Stable-Diffusion</p>
+                <p class="bart-title">(Segmentation)</p>
+                <p class="bart-title plp">Tested on GPU-L4 devices</p>
+                <div class="bar" id="bar78">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar78-value">3.6x</span>
+                    <span class="bar-text">Energy Savings</span>
+                </div>
+                <div class="bar" id="bar8">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar8-value">70%</span>
+                    <span class="bar-text">Memory Savings</span>
+                </div>
+               
+                <div class="bar" id="bar7">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar7-value">3.6x</span>
+                    <span class="bar-text">Latency  Speedup</span>
+                </div>
+            </div>
+            <div class="bar-container" id="bar-container-5" style="display: none;">
+                <p class="pl ">BERT</p>
+                <p class="bart-title">(Segmentation)</p>
+                <p class="bart-title plp">Tested on GPU-L4 devices</p>
+                <div class="bar" id="bar910">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar910-value">3.6x</span>
+                    <span class="bar-text">Energy Savings</span>
+                </div>
+                <div class="bar" id="bar10">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar10-value">70%</span>
+                    <span class="bar-text">Memory Savings</span>
+                </div>
+               
+                <div class="bar" id="bar9">
+                    <span class="bar-value animated-box animate__animated animate__fadeInRight animate__delay-2s" id="bar9-value">3.6x</span>
+                    <span class="bar-text">Latency  Speedup</span>
+                </div>
+            </div>
+            <!-- Add more bar containers as needed -->
+    
             <div class="options-container">
                 <div id="preloader" class="preloader"></div>
                 <!-- <p id="loadingText" class="loading-text">Loading...</p> -->
             </div>
-            <button onclick="changeImage('./assets/images/post3.svg')">YoloV8/RT-Detr</button>
-            <button onclick="changeImage('./assets/images/post2.svg')">VanillaNet</button>
-            <button onclick="changeImage('./assets/images/post4.svg')">Llama-7B</button>
-            
-            <button onclick="changeImage('./assets/images/post5.svg')">Stable-Diffusion</button>
-            <button onclick="changeImage('./assets/images/post6.svg')">BERT</button>
-            <!-- Add more buttons as needed -->
+            <br>
+            <button onclick="changeBars('YoloV8/RT-Detr')">YoloV8/RT-Detr</button>
+            <button onclick="changeBars('VanillaNet')">VanillaNet</button>
+            <button onclick="changeBars('Llama-7B')">Llama-7B</button>
+            <button onclick="changeBars('Stable-Diffusion')">Stable-Diffusion</button>
+            <button onclick="changeBars('BERT')">BERT</button>
         </div>
+    
+       
+    <script>
+        function changeBars(option) {
+            // Reset all bars to initial width and clear values
+            var bars = document.querySelectorAll('.bar');
+            bars.forEach(function(bar) {
+                bar.style.width = 'calc(' + bar.querySelector('.bar-value').innerText + ')';
+                bar.querySelector('.bar-value').innerText = '';
+            });
+
+            // Hide all bar containers
+            var barContainers = document.querySelectorAll('.bar-container');
+            barContainers.forEach(function(container) {
+                container.style.display = 'none';
+            });
+
+            // Adjust bars according to the selected option
+            switch(option) {
+                case 'YoloV8/RT-Detr':
+                    document.getElementById('bar1').style.width = '50%';
+                    document.getElementById('bar1-value').innerText = '3.6x';
+                    document.getElementById('bar2').style.width = '102%';
+                    document.getElementById('bar2-value').innerText = '10.2x';
+                    document.getElementById('bar12').style.width = '56%';
+                    document.getElementById('bar12-value').innerText = '5.6x';
+                    document.getElementById('bar-container-1').style.display = 'block'; // Display the corresponding bar container
+                    break;
+                case 'VanillaNet':
+                document.getElementById('bar3').style.width = '50%';
+                    document.getElementById('bar3-value').innerText = '3.6x';
+                    document.getElementById('bar4').style.width = '102%';
+                    document.getElementById('bar4-value').innerText = '10.2x';
+                    document.getElementById('bar34').style.width = '56%';
+                    document.getElementById('bar34-value').innerText = '5.6x';
+                    document.getElementById('bar-container-2').style.display = 'block'; 
+                    break;
+                    case 'Llama-7B':
+                    document.getElementById('bar5').style.width = '50%';
+                    document.getElementById('bar5-value').innerText = '3.6x';
+                    document.getElementById('bar6').style.width = '102%';
+                    document.getElementById('bar6-value').innerText = '10.2x';
+                    document.getElementById('bar56').style.width = '56%';
+                    document.getElementById('bar56-value').innerText = '5.6x';
+                    document.getElementById('bar-container-3').style.display = 'block'; // Display the corresponding bar container
+                    break;
+                    case 'Stable-Diffusion':
+                    document.getElementById('bar7').style.width = '50%';
+                    document.getElementById('bar7-value').innerText = '3.6x';
+                    document.getElementById('bar8').style.width = '102%';
+                    document.getElementById('bar8-value').innerText = '10.2x';
+                    document.getElementById('bar78').style.width = '56%';
+                    document.getElementById('bar78-value').innerText = '5.6x';
+                    document.getElementById('bar-container-4').style.display = 'block'; // Display the corresponding bar container
+                    break;
+                    case 'BERT':
+                    document.getElementById('bar9').style.width = '50%';
+                    document.getElementById('bar9-value').innerText = '3.6x';
+                    document.getElementById('bar10').style.width = '102%';
+                    document.getElementById('bar10-value').innerText = '10.2x';
+                    document.getElementById('bar910').style.width = '56%';
+                    document.getElementById('bar910-value').innerText = '5.6x';
+                    document.getElementById('bar-container-5').style.display = 'block'; // Display the corresponding bar container
+                    break;
+                // Add cases for other options
+            }
+
+            // Display additional text when a button is clicked
+            var additionalText = document.getElementById('additional-text');
+            if (additionalText) {
+                additionalText.style.display = 'block';
+            }
+        }
+    </script>
     </div>
     
     <script>
