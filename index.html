@@ -625,11 +625,11 @@ p {
     }
     .bar {
         position: relative;
-        top:-190%;
+        top:-150%;
         width: calc(100% - 20px); /* Adjust width to leave space for values */
-        height: 35px; /* Adjust height as needed */
+        height: 55px; /* Adjust height as needed */
         background: var(--Linear, linear-gradient(90deg, #013A98 0%, #449DD1 100%));;
-        margin-top: -48%;
+        margin-top: -61%;
         margin-left:120%;
         animation: fillBar 1s ease-in-out forwards; /* Animation for filling bars */
     }
@@ -651,8 +651,8 @@ p {
     margin-bottom: 10px; /* Add some space between bars if needed */
     animation: appear 4s ease forwards;
     opacity: 0;
-    font-size: 14px;
- padding-top: 5px;
+    font-size: 18px;
+ padding-top: 9px;
     margin-left:15px;
 }
 
@@ -685,42 +685,10 @@ p {
 
 
     <script>
-const buttons = document.querySelectorAll('.options-buttons button');
+
   let activeButton = null;
 
   // Function to handle button activation
-  function activateButton(button) {
-    if (activeButton !== button) {
-      // Remove active class from previously active button
-      if (activeButton) {
-        activeButton.classList.remove('active');
-      }
-      // Add active class to the clicked button
-      button.classList.add('active');
-      activeButton = button;
-    }
-  }
-
-  // Add mousedown event listeners to each button
-  buttons.forEach(button => {
-    button.addEventListener('mousedown', () => {
-      activateButton(button);
-    });
-  });
-
-  // Add mouseup event listeners to each button
-  buttons.forEach(button => {
-    button.addEventListener('mouseup', () => {
-      button.classList.remove('active');
-    });
-  });
-
-  // Add mouseleave event listeners to each button
-  buttons.forEach(button => {
-    button.addEventListener('mouseleave', () => {
-      button.classList.remove('active');
-    });
-  });
 
 
 
@@ -902,16 +870,42 @@ const buttons = document.querySelectorAll('.options-buttons button');
                 <!-- <p id="loadingText" class="loading-text">Loading...</p> -->
             </div>
             <br>
-            <button class="poz" onclick="changeBars('YoloV8/RT-Detr')">YoloV8/RT-Detr</button>
-            <button class="poz" onclick="changeBars('VanillaNet')">VanillaNet</button>
-            <button class="poz" onclick="changeBars('Llama-7B')">Llama-7B</button>
-            <button class="poz" onclick="changeBars('Stable-Diffusion')">Stable-Diffusion</button>
-            <button class="poz" onclick="changeBars('BERT')">BERT</button>
+            <button class="poz" id="button1" onclick="changeBars('YoloV8/RT-Detr'); changeColor('button1')">YoloV8/RT-Detr</button>
+
+            <button class="poz" id="button2" onclick="changeBars('VanillaNet'); changeColor('button2')">VanillaNet</button>
+            <button class="poz" id="button3" onclick="changeBars('Llama-7B'); changeColor('button3')">Llama-7B</button>
+            <button class="poz" id="button4" onclick="changeBars('Stable-Diffusion'); changeColor('button4')">Stable-Diffusion</button>
+            <button class="poz" id="button5"onclick="changeBars('BERT'); changeColor('button5')">BERT</button>
         </div>
     
-       
+        <script>
+            let previousButton = null;
+        
+            function changeColor(buttonId) {
+                const button = document.getElementById(buttonId);
+        
+                // If the clicked button is already active, return
+                if (button.classList.contains('active')) {
+                    return;
+                }
+        
+                // If there was a previously active button, remove its 'active' class
+                if (previousButton !== null) {
+                    previousButton.classList.remove('active');
+                }
+        
+                // Add 'active' class to the clicked button
+                button.classList.add('active');
+        
+                // Set the clicked button as the previous button
+                previousButton = button;
+            }
+        </script>
+        
     <script>
+        
         function changeBars(option) {
+            
             // Reset all bars to initial width and clear values
             var bars = document.querySelectorAll('.bar');
             bars.forEach(function(bar) {
@@ -928,47 +922,47 @@ const buttons = document.querySelectorAll('.options-buttons button');
             // Adjust bars according to the selected option
             switch(option) {
                 case 'YoloV8/RT-Detr':
-                    document.getElementById('bar1').style.width = '65%';
+                    document.getElementById('bar1').style.width = '135%';
                     document.getElementById('bar1-value').innerText = '4.6x';
-                    document.getElementById('bar2').style.width = '132%';
+                    document.getElementById('bar2').style.width = '202%';
                     document.getElementById('bar2-value').innerText = '11.7x';
-                    document.getElementById('bar12').style.width = '99%';
+                    document.getElementById('bar12').style.width = '169%';
                     document.getElementById('bar12-value').innerText = '7.4x';
                     document.getElementById('bar-container-1').style.display = 'block'; // Display the corresponding bar container
                     break;
                 case 'VanillaNet':
-                document.getElementById('bar3').style.width = '92%';
+                document.getElementById('bar3').style.width = '162%';
                     document.getElementById('bar3-value').innerText = '9.8x';
-                    document.getElementById('bar4').style.width = '142%';
+                    document.getElementById('bar4').style.width = '212%';
                     document.getElementById('bar4-value').innerText = '12.5x';
-                    document.getElementById('bar34').style.width = '162%';
+                    document.getElementById('bar34').style.width = '232%';
                     document.getElementById('bar34-value').innerText = '13.4x';
                     document.getElementById('bar-container-2').style.display = 'block'; 
                     break;
                     case 'Llama-7B':
-                    document.getElementById('bar5').style.width = '65%';
+                    document.getElementById('bar5').style.width = '135%';
                     document.getElementById('bar5-value').innerText = '4.8x';
-                    document.getElementById('bar6').style.width = '122%';
+                    document.getElementById('bar6').style.width = '192%';
                     document.getElementById('bar6-value').innerText = '9.2x';
-                    document.getElementById('bar56').style.width = '90%';
+                    document.getElementById('bar56').style.width = '160%';
                     document.getElementById('bar56-value').innerText = '7.2x';
                     document.getElementById('bar-container-3').style.display = 'block'; // Display the corresponding bar container
                     break;
                     case 'Stable-Diffusion':
-                    document.getElementById('bar7').style.width = '65%';
+                    document.getElementById('bar7').style.width = '135%';
                     document.getElementById('bar7-value').innerText = '3.6x';
-                    document.getElementById('bar8').style.width = '142%';
+                    document.getElementById('bar8').style.width = '212%';
                     document.getElementById('bar8-value').innerText = '10.2x';
-                    document.getElementById('bar78').style.width = '96%';
+                    document.getElementById('bar78').style.width = '166%';
                     document.getElementById('bar78-value').innerText = '5.6x';
                     document.getElementById('bar-container-4').style.display = 'block'; // Display the corresponding bar container
                     break;
                     case 'BERT':
-                    document.getElementById('bar9').style.width = '65%';
+                    document.getElementById('bar9').style.width = '135%';
                     document.getElementById('bar9-value').innerText = '4.7x';
-                    document.getElementById('bar10').style.width = '152%';
+                    document.getElementById('bar10').style.width = '222%';
                     document.getElementById('bar10-value').innerText = '12.5x';
-                    document.getElementById('bar910').style.width = '102%';
+                    document.getElementById('bar910').style.width = '172%';
                     document.getElementById('bar910-value').innerText = '8x';
                     document.getElementById('bar-container-5').style.display = 'block'; // Display the corresponding bar container
                     break;
