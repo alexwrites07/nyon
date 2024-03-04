@@ -1686,7 +1686,7 @@ p {
 }
 
 .ourTeam .i .c .more p {
-  margin: 0 18px 30px 18px;
+  margin: 0 18px 40px 18px;
   line-height: 22px
 }
 
@@ -1699,7 +1699,7 @@ p {
   -khtml-opacity: 0;
   -webkit-opacity: 0;
   opacity: 0;
-  height: 114px;
+  height: 104px;
   /* display: none; */
 }
 
@@ -1806,7 +1806,7 @@ p {
 }
 .service_tab_1:hover .fa-icon-image{
     color: #000;
-    transform: rotate(360deg) scale(1.5);
+    /* transform: rotate(360deg) scale(1.5); */
 }
 
 
@@ -1826,6 +1826,8 @@ p {
     text-align: center;
     transition: all 1s cubic-bezier(.99,.82,.11,1.41);
 }
+
+
 
 .mobile {
   display: none;
