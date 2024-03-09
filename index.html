@@ -292,6 +292,8 @@ p {
                         <style>
                             .kk{
                                 height:400px;
+                                /* margin-right: 10%;
+                                width:20%; */
                             }
                             .vb{
                                 margin-top: -8px;
@@ -650,7 +652,7 @@ left:-40%;
         text-align: center;
        
     }
-  @media (max-width:1001px){
+  @media (min-width:501px) and (max-width:1000px){
     .bar-container {
         width: 200px;
         height: 60px; /* Adjust height as needed */
@@ -660,7 +662,20 @@ left:-40%;
 
     }
 }
-@media (min-width:1000px){
+@media (max-width:500px){
+    .bar-container {
+        width: 200px;
+        height: 60px; /* Adjust height as needed */
+        margin-top: 350px; /* Center the bar containers */
+        margin-left: -45vh;
+        padding-left: -20%;
+      margin-bottom: -22%;
+
+    }
+  
+}
+
+@media (min-width:1001px){
     .bar-container {
         width: 200px;
         height: 60px; /* Adjust height as needed */
@@ -736,7 +751,7 @@ left:-40%;
     margin-bottom: 10px; /* Add some space between bars if needed */
     animation: appear 4s ease forwards;
     opacity: 0;
-    font-size: 18px;
+    font-size: 14px;
  padding-top: 9px;
     margin-left:15px;
 }
@@ -855,7 +870,7 @@ left:-40%;
            
             <!-- Add more buttons as needed -->
     
-            <div class="bar-container" id="bar-container-1" style="display: none;">
+            <div class="bar-container nnh" id="bar-container-1" style="display: none;">
                 <!-- <p class=" pl">YoloV8/RT-Detr</p>
                 <p class="bart-title">(Segmentation)</p> -->
                 <p class="bart-title plp">Tested on GPU-L4 devices</p>
@@ -1190,6 +1205,29 @@ document.addEventListener("DOMContentLoaded", function() {
                         .mjk{
                             margin-top: -40px;
                         }
+                        @media (max-width:401px){
+                            .gtu{
+                                margin-top:-20%;
+                            }
+                            .misn-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: flex-start;
+   
+    height:820px; /* Make each block take up the full height of its parent */
+}
+                            .dsa{
+                                font-size: 10px;
+                            }
+                            .wes{
+                                margin-top: -70%;
+                            }
+                            .vbnf{
+                                margin-bottom: 20%;
+                            }
+
+                        }
                         @media (max-width:768px){
                            
                             .kj{
@@ -1410,14 +1448,15 @@ document.addEventListener("DOMContentLoaded", function() {
     justify-content: center;
     align-items: stretch; /* Make all boxes the same height */
 }
-
+@media (min-width:402px){
 .misn-block {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Distribute space between items */
     align-items: flex-start;
+   
     height: 100%; /* Make each block take up the full height of its parent */
-}
+}}
 .llo{
     background-color: black;
 }
@@ -1468,7 +1507,7 @@ document.addEventListener("DOMContentLoaded", function() {
  <img class="img-fluid" src="assets/images/logo-img.png">
 <img class="img-fluid" src="assets/images/nyun_adapt_illustration.svg">
                 </div>
-                <div class="lc-block heading">
+                <div class="lc-block heading dsa">
                     <br>
                         <h4>Unlock the full potential of Generative models </h4>
                     <ul>
@@ -1477,20 +1516,20 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li> Efficient Deployment with Nyun Zero
                         </li>
                     </ul><br>
-                    <button developing="" type="button" class="btn kl btn-success">Hamess the power of Nyun Adapt</button>
+                    <button developing="" type="button" class="btn kl btn-success px-2">Hamess the power of Nyun Adapt</button> 
                 </div>
                 
             </div>
         </div>
-        <div class="col-md-6 col-lg-5 col-xl-4 mt-5">
+        <div class="col-md-6 col-lg-5 col-xl-4 mt-5 vbnf">
             <div class="misn-block lc-block h-misn-block">
-                <div class="lc-block">
- <img class="img-fluid" src="assets/images/compressd.png">
-<img class="img-fluid" src="assets/images/nyun_kompress_illustration.svg">
+                <div class="lc-block ">
+ <img class="img-fluid " src="assets/images/compressd.png">
+<img class="img-fluid wes " src="assets/images/nyun_kompress_illustration.svg">
                 </div>
-                <div class="lc-block heading hh">
-                    <br> <br> <br>
-                        <h4 >Make your models ultra efficient </h4>
+                <div class="lc-block heading hh dsa">
+                    <br> <br><br> 
+                        <h4 class="gtu" >Make your models ultra efficient </h4>
                     <ul>
 
                         <li>Use multiple model compression techniques to make the models fast and efficient.</li>
@@ -1498,18 +1537,19 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li> Easily deployable through Nyun Zero platform
                         </li>
                     </ul><br>
-                    <button developing="" type="button" class="btn kl btn-success px-5">Discover Nyun Kompress</button>
+                    <button developing="" type="button" class="btn kl btn-success px-2">Discover Nyun Kompress</button>
+                
                 </div>
                 
             </div>
         </div>
-        <div class="col-md-6 col-lg-5 col-xl-4 mt-5">
-            <div class="misn-block lc-block h-misn-block">
-                <div class="lc-block">
- <img class="img-fluid" src="assets/images/track_logo.svg">
-<img class="img-fluid" src="assets/images/nyun_track_illustration.svg">
+        <div class="col-md-6 col-lg-5 col-xl-4 mt-5 gtu">
+            <div class="misn-block lc-block h-misn-block gtu">
+                <div class="lc-block ">
+ <img class="img-fluid " src="assets/images/track_logo.svg">
+<img class="img-fluid " src="assets/images/nyun_track_illustration.svg">
                 </div>
-                <div class="lc-block heading">
+                <div class="lc-block heading dsa">
                     <br>
                         <h4>All relevant KPIs at your fingertips </h4>
                     <ul>
@@ -1519,7 +1559,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         
                     </ul>
                     <br>
-                    <button developing="" type="button" class="btn btn-success px-5">Monitor with Nyun Tracker</button>
+                    <button developing="" type="button" class="btn btn-success">Monitor with Nyun Tracker</button>
                 </div>
                 
             </div>
@@ -1531,7 +1571,7 @@ document.addEventListener("DOMContentLoaded", function() {
                
             </div>
         </div>
-
+<br><br>
     </section>
 
     <!-- Mobile View -->
