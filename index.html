@@ -3,12 +3,15 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Index Nyunai</title>
+    <title>Nyunai</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
     <style>
+        /* body{
+            background-color: black;
+        } */
         .carousel-item {
             height: 100px; /* Adjust the height as needed */
             display: flex;
@@ -119,6 +122,24 @@ p {
     .mkl{
         margin-top: -20%;
     }
+    @media  (max-width:800px){
+        .mkl{
+            margin-top:-45%;
+            margin-left:0 5%;
+        }
+        .uuu{
+            margin-top: 10%;
+        }
+
+    }
+    @media  (min-width:800px) and (max-width:1020px){
+
+        .ctn{
+            width:300px;
+        }
+
+
+    }
     .menu li {
         position: relative;
         float: left;
@@ -215,6 +236,23 @@ p {
             });
         });
         </script>
+        <style>
+            .carousel-image {
+                width: 20%; /* Set a fixed width for the images */
+                height: 20px; /* Allow the height to adjust proportionally */
+              
+            }
+            @media (min-width:800px){
+            .uuu{
+                width :50%
+            }
+        }
+        @media (max-width:799px){
+            .uuu{
+                width :70%
+            }
+        }
+        </style>
   <section class="banners ">
   </section><section class="banners py-5">
     </section>
@@ -235,7 +273,7 @@ p {
                         </span>
                     </h1>
                     <div class="ctn">
-                        <a href="contact-us.html" type="button" class="btn btn-outline-secondary w-50">Contact Us &gt;&gt;
+                        <a href="contact-us.html" type="button" class="btn btn-outline-secondary w-50 ">Contact Us &gt;&gt;
                         </a>
                     </div>
                 </div>
@@ -250,6 +288,7 @@ p {
                             Whether it's <span> optimizing performance, or accelerating inference speeds, we've got
                                 you covered.
                         </span></p>
+             </div></div>    
                         <style>
                             .kk{
                                 height:400px;
@@ -265,171 +304,97 @@ p {
     overflow: hidden;
     text-overflow: ellipsis; /* Optional: Add ellipsis for text overflow */
 }
-.vgb{
-    height: 20px;
-}
+
 .carousel-item .nyunai button img {
     height: 60px; /* Adjust the height value as needed */
 }
+@media (min-width:576) and (max-width:1000px)
+{.qaz{
 
+position: relative;
+top:20%;
+left:-40%;
+
+}
+.piu{
+    width: 300px;
+}
+}
 
                         </style>
-                        <div class="container ">
-                            <div class="row">
-                                <div class="col-lg-12 col-sm-12 col-md-12 ">
-                                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="false">
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active kk">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-lg-11">
-                                                            <div class="nyunai">
-                                                                <p>Budget aware binarization of CNNs using MixBin, <span>WACV 2024</span>
-                                                                </p>
-                                                                <button type="button" class="btn btn-light w-100 vb vgh"><img
-                                                                        src="./assets/images/WACV-Logo_2024-1024x263.png"></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item kk">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-lg-11">
-                                                            <div class="nyunai">
-                                                                <p>Growing Vision Transformers with Heterogenous scaling for improved efficiency and performance,<span> ICLR 2024</span>
-                                                                </p>
-                                                                <button type="button" class="btn btn-light w-100 vgh"><img
-                                                                        src="assets/images/ICRL1.jpeg"></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item kk">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-lg-11">
-                                                            <div class="nyunai">
-                                                                <p>⁠Rethinking Compression with Reduced Order Modelling for lighter LLMs,<span> ICLR 2024</span></p>
-                                                                <button type="button" class="btn btn-light w-100 vgh "><img
-                                                                        src="assets/images/ICRL1.jpeg"></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item kk">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-lg-11">
-                                                            <div class="nyunai">
-                                                                <p>⁠Designing light-weight CNN and transformer based object trackers through network pruning, <span> ICASSP 2023*</span>
-                                                                </p>
-                                                                <button type="button" class="btn btn-light w-100 vgh"><img
-                                                                        src="assets/images/ICASSP.jpeg"></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item kk">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-lg-11">
-                                                            <div class="nyunai">
-                                                                <p>⁠Benchmarking model training and inference for resource constrained deep learning, <span>RCV@ICCV 2023</span>
-                                                                </p>
-                                                                <button type="button" class="btn btn-light w-100 vgh"><img
-                                                                        src="assets/images/iccv.jpeg"></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item kk">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-lg-11">
-                                                            <div class="nyunai">
-                                                                <p>⁠Training CNNs on large images on single GPU, once impossible, with patchGD.  <span>WANT@NeurIPS 2023</span>
-                                                                </p>
-                                                                <button type="button" class="btn btn-light w-100 "><img
-                                                                        src="assets/images/Neurisp.jpeg"></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item kk">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-lg-11">
-                                                            <div class="nyunai">
-                                                                <p>⁠Slimming vision transformers without performance degradation using ViT-Slimming, <span>CVPR 2022</span>
-                                                                </p>
-                                                                <button type="button" class="btn btn-light w-100 vgh"><img
-                                                                        src="assets/images/cvpr.png"></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item kk">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-lg-11">
-                                                            <div class="nyunai">
-                                                                <p>⁠Improving the generalization ability & compute efficiency of Meta learning with MetaDOCK, <span>CVPR 2022</span>
-                                                                </p>
-                                                                <button type="button" class="btn btn-light w-100 vgh"><img
-                                                                        src="assets/images/cvpr.png"></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item kk">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-lg-11">
-                                                            <div class="nyunai">
-                                                                <p>⁠Rescaling CNNs through Learnable Repetitions of Network Parameters, <span>ICIP 2021</span>
-                                                                </p>
-                                                                <button type="button" class="btn btn-light w-100 vgh"><img
-                                                                        src="assets/images/icip.jpeg"></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item kk">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-lg-11">
-                                                            <div class="nyunai">
-                                                                <p>Developed the state-of-the-art (SOTA) model pruning method, called ChipNet,<span> ICLR 2021</span>
-                                                                </p>
-                                                                <button type="button" class="btn btn-light w-100 vgh"><img
-                                                                        src="assets/images/ICRL1.jpeg"></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                       
+                       <div class="container uuu">
+                        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active kk">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-11">
+                                                <div class="nyunai">
+                                                    <p>Budget aware binarization of CNNs using MixBin, <span>WACV 2024</span></p>
+                                                    <button type="button" class="btn btn-light w-100 vb vgh">
+                                                        <img src="./assets/images/WACV-Logo_2024-1024x263.png" class="carousel-image">
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <a class="carousel-control-prev mkl" href="#carouselExampleDark" role="button" data-bs-slide="prev" style="left: 0;">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden"></span>
-                                        </a>
-                                        <!-- Next button on the right -->
-                                        <a class="carousel-control-next mkl" href="#carouselExampleDark" role="button" data-bs-slide="next" style="right: 0;">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden"></span>
-                                        </a>
-                                     
                                     </div>
+                                </div>
+                                <div class="carousel-item kk">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-11">
+                                                <div class="nyunai">
+                                                    <p>Growing Vision Transformers with Heterogenous scaling for improved efficiency and performance,<span> ICLR 2024</span></p>
+                                                    <button type="button" class="btn btn-light w-100 vgh">
+                                                        <img src="assets/images/ICRL1.jpeg" class="carousel-image">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item kk">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-11">
+                                                <div class="nyunai">
+                                                    <p>⁠Rethinking Compression with Reduced Order Modelling for lighter LLMs,<span> ICLR 2024</span></p>
+                                                    <button type="button" class="btn btn-light w-100 vgh ">
+                                                        <img src="assets/images/ICRL1.jpeg" class="carousel-image">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item kk">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-11">
+                                                <div class="nyunai">
+                                                    <p>⁠Designing light-weight CNN and transformer based object trackers through network pruning, <span> ICASSP 2023*</span></p>
+                                                    <button type="button" class="btn btn-light w-100 vgh">
+                                                        <img src="assets/images/ICASSP.jpeg" class="carousel-image">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add other carousel items here -->
+                            </div>
+                            <!-- Controls -->
+                            <a class="carousel-control-prev mkl" href="#carouselExampleDark" role="button" data-bs-slide="prev" style="left: 0;">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden"></span>
+                            </a>
+                            <a class="carousel-control-next mkl" href="#carouselExampleDark" role="button" data-bs-slide="next" style="right: 0;">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden"></span>
+                            </a>
+                        </div>
+                    </div>
                                 </div>
                             </div>
                         </div>
@@ -520,11 +485,12 @@ p {
     
     <div class="lpo ml-5">
         <!-- <div class="logo-row" id="logoRow"> -->
+           
             <img src="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8cac85ba1a556c8fa0_MS_Startups_Celebration_Badge_Light.png" alt="Microsoft for Startups" width="150" height="70" class="partner-logo">
-            <img src="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo.png" alt="Google Cloud for Startups"  sizes="(max-width: 479px) 27vw, (max-width: 767px) 45vw, (max-width: 1591px) 15vw, 6vw" srcset="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo-p-500.png 500w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo.png 600w" class="partner-logo mk nn">
-            <img src="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate.webp" alt="AWS Activate"  sizes="(max-width: 479px) 27vw, (max-width: 767px) 45vw, (max-width: 991px) 30vw, (max-width: 1591px) 15vw, 6vw" srcset="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate-p-500.webp 500w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate-p-800.webp 800w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate.webp 1024w" class="partner-logo mk nn">
+            <img src="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo.png" alt="Google Cloud for Startups"  width="150" height="70" srcset="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo-p-500.png 500w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4d8c8700d259e7671047_Google-Cloud-for-Startups-logo.png 600w" class="partner-logo mk nn">
+        <img src="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate.webp" alt="AWS Activate"  width="150" height="70" srcset="https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate-p-500.webp 500w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate-p-800.webp 800w, https://assets-global.website-files.com/648033a07443fa45bc28a3e5/64cb4dad796a3d49adaf9832_aws-activate.webp 1024w" class="partner-logo mk nn">
             <img src="https://insights.virti.com/content/images/size/w2000/2021/09/20181218-Nvidia-Inception.png" alt="Nvidia Inception" height="70"  width="150" srcset="https://insights.virti.com/content/images/size/w2000/2021/09/20181218-Nvidia-Inception.png" class="partner-logo">
-        <!-- </div> -->
+       
     </div>
 <style>
     .mk{
@@ -548,6 +514,7 @@ p {
     <style>
 .partner-logos-container {
     overflow-x: hidden;
+    
     white-space: nowrap; /* Prevent logos from wrapping to the next line */
     
 }
@@ -559,6 +526,7 @@ p {
 
 .partner-logo {
     margin-right: 60px;
+    margin-top: 5%;
 }
 
 
@@ -682,16 +650,26 @@ p {
         text-align: center;
        
     }
-
+  @media (max-width:1001px){
     .bar-container {
         width: 200px;
         height: 60px; /* Adjust height as needed */
         margin-top: 350px; /* Center the bar containers */
+        margin-left: -15vh;
+      margin-bottom: -12%;
+
+    }
+}
+@media (min-width:1000px){
+    .bar-container {
+        width: 200px;
+        height: 60px; /* Adjust height as needed */
+        margin-top: 390px; /* Center the bar containers */
         margin-left: 2%;
       margin-bottom: -12%;
 
     }
-
+}
     .bar-title {
         position: relative;
         top:-550%;
@@ -727,6 +705,7 @@ p {
        font-size:11px;
        
     }
+   
     .bar {
         position: relative;
         top:-150%;
@@ -871,7 +850,7 @@ p {
             
             <!-- <img src="./assets/images/post6.png" alt="Second Image" class="dynamic-image" id="dynamicImage"> -->
         </div>
-        <div class="options-buttons">
+        <div class="options-buttons " >
            
            
             <!-- Add more buttons as needed -->
@@ -1012,7 +991,46 @@ document.addEventListener("DOMContentLoaded", function() {
                 previousButton = button;
             }
         </script>
-        
+        <style>
+            @media screen and (max-width: 768px) {
+    #bar1 {
+        width: 10px; /* Adjust the width for smaller screens */
+    }
+    #bar2 {
+        width: 2000px; /* Adjust the width for smaller screens */
+    } #bar3 {
+        width: 2000px; /* Adjust the width for smaller screens */
+    } #bar4 {
+        width: 2000px; /* Adjust the width for smaller screens */
+    } #bar5 {
+        width: 2000px; /* Adjust the width for smaller screens */
+    } #bar6 {
+        width: 2000px; /* Adjust the width for smaller screens */
+    } #bar7 {
+        width: 2000px; /* Adjust the width for smaller screens */
+    } #bar8 {
+        width: 2000px; /* Adjust the width for smaller screens */
+    } #bar9 {
+        width: 2000px; /* Adjust the width for smaller screens */
+    } #bar10 {
+        width: 2000px; /* Adjust the width for smaller screens */
+    }
+
+    #bar12 {
+        width: 2000px; /* Adjust the width for smaller screens */
+    } #bar34 {
+        width: 2000px; /* Adjust the width for smaller screens */
+    } #bar56 {
+        width: 2000px; /* Adjust the width for smaller screens */
+    } #bar78 {
+        width: 2000px; /* Adjust the width for smaller screens */
+    } #bar910 {
+        width: 2000px; /* Adjust the width for smaller screens */
+    }
+    /* Add similar rules for other bars */
+}
+
+        </style>
     <script>
         
         function changeBars(option) {
@@ -1029,58 +1047,80 @@ document.addEventListener("DOMContentLoaded", function() {
             barContainers.forEach(function(container) {
                 container.style.display = 'none';
             });
-
-            // Adjust bars according to the selected option
             switch(option) {
-                case 'YoloV8/RT-Detr':
-                    document.getElementById('bar1').style.width = '135%';
-                    document.getElementById('bar1-value').innerText = '4.6x';
-                    document.getElementById('bar2').style.width = '202%';
-                    document.getElementById('bar2-value').innerText = '11.7x';
-                    document.getElementById('bar12').style.width = '169%';
-                    document.getElementById('bar12-value').innerText = '7.4x';
-                    document.getElementById('bar-container-1').style.display = 'block'; // Display the corresponding bar container
-                    break;
-                case 'VanillaNet':
-                document.getElementById('bar3').style.width = '162%';
-                    document.getElementById('bar3-value').innerText = '9.8x';
-                    document.getElementById('bar4').style.width = '212%';
-                    document.getElementById('bar4-value').innerText = '12.5x';
-                    document.getElementById('bar34').style.width = '232%';
-                    document.getElementById('bar34-value').innerText = '13.4x';
-                    document.getElementById('bar-container-2').style.display = 'block'; 
-                    break;
-                    case 'Llama-7B':
-                    document.getElementById('bar5').style.width = '135%';
-                    document.getElementById('bar5-value').innerText = '4.8x';
-                    document.getElementById('bar6').style.width = '192%';
-                    document.getElementById('bar6-value').innerText = '9.2x';
-                    document.getElementById('bar56').style.width = '160%';
-                    document.getElementById('bar56-value').innerText = '7.2x';
-                    document.getElementById('bar-container-3').style.display = 'block'; // Display the corresponding bar container
-                    break;
-                    case 'Stable-Diffusion':
-                    document.getElementById('bar7').style.width = '135%';
-                    document.getElementById('bar7-value').innerText = '3.6x';
-                    document.getElementById('bar8').style.width = '212%';
-                    document.getElementById('bar8-value').innerText = '10.2x';
-                    document.getElementById('bar78').style.width = '166%';
-                    document.getElementById('bar78-value').innerText = '5.6x';
-                    document.getElementById('bar-container-4').style.display = 'block'; // Display the corresponding bar container
-                    break;
-                    case 'BERT':
-                    document.getElementById('bar9').style.width = '135%';
-                    document.getElementById('bar9-value').innerText = '4.7x';
-                    document.getElementById('bar10').style.width = '222%';
-                    document.getElementById('bar10-value').innerText = '12.5x';
-                    document.getElementById('bar910').style.width = '172%';
-                    document.getElementById('bar910-value').innerText = '8x';
-                    document.getElementById('bar-container-5').style.display = 'block'; // Display the corresponding bar container
-                    break;
-                // Add cases for other options
-            }
+    case 'YoloV8/RT-Detr':
+        var screenWidth = window.innerWidth;
+        var bar1Width = (screenWidth * 0.135) +100;
+        var bar2Width = (screenWidth * 0.202)+100;
+        var bar12Width = (screenWidth * 0.169)+100;
 
-            // Display additional text when a button is clicked
+        document.getElementById('bar1').style.width = bar1Width + 'px';
+        document.getElementById('bar1-value').innerText = '4.6x';
+        document.getElementById('bar2').style.width = bar2Width + 'px';
+        document.getElementById('bar2-value').innerText = '11.7x';
+        document.getElementById('bar12').style.width = bar12Width + 'px';
+        document.getElementById('bar12-value').innerText = '7.4x';
+        document.getElementById('bar-container-1').style.display = 'block'; // Display the corresponding bar container
+        break;
+    case 'VanillaNet':
+        var screenWidth = window.innerWidth;
+        var bar3Width = (screenWidth * 0.162) +100;
+        var bar4Width = (screenWidth * 0.212) +100;
+        var bar34Width = (screenWidth * 0.232) +100;
+
+        document.getElementById('bar3').style.width = bar3Width + 'px';
+        document.getElementById('bar3-value').innerText = '9.8x';
+        document.getElementById('bar4').style.width = bar4Width + 'px';
+        document.getElementById('bar4-value').innerText = '12.5x';
+        document.getElementById('bar34').style.width = bar34Width + 'px';
+        document.getElementById('bar34-value').innerText = '13.4x';
+        document.getElementById('bar-container-2').style.display = 'block';
+        break;
+    case 'Llama-7B':
+        var screenWidth = window.innerWidth;
+        var bar5Width = (screenWidth * 0.135) +100;
+        var bar6Width = (screenWidth * 0.192) +100;
+        var bar56Width = (screenWidth * 0.160) +100;
+
+        document.getElementById('bar5').style.width = bar5Width + 'px';
+        document.getElementById('bar5-value').innerText = '4.8x';
+        document.getElementById('bar6').style.width = bar6Width + 'px';
+        document.getElementById('bar6-value').innerText = '9.2x';
+        document.getElementById('bar56').style.width = bar56Width + 'px';
+        document.getElementById('bar56-value').innerText = '7.2x';
+        document.getElementById('bar-container-3').style.display = 'block';
+        break;
+    case 'Stable-Diffusion':
+        var screenWidth = window.innerWidth;
+        var bar7Width = (screenWidth * 0.135) +100;
+        var bar8Width = (screenWidth * 0.212) +100;
+        var bar78Width = (screenWidth * 0.166) +100;
+
+        document.getElementById('bar7').style.width = bar7Width + 'px';
+        document.getElementById('bar7-value').innerText = '3.6x';
+        document.getElementById('bar8').style.width = bar8Width + 'px';
+        document.getElementById('bar8-value').innerText = '10.2x';
+        document.getElementById('bar78').style.width = bar78Width + 'px';
+        document.getElementById('bar78-value').innerText = '5.6x';
+        document.getElementById('bar-container-4').style.display = 'block';
+        break;
+    case 'BERT':
+        var screenWidth = window.innerWidth;
+        var bar9Width = (screenWidth * 0.135) +100;
+        var bar10Width = (screenWidth * 0.222) +100;
+        var bar910Width = (screenWidth * 0.172) +100;
+
+        document.getElementById('bar9').style.width = bar9Width + 'px';
+        document.getElementById('bar9-value').innerText = '4.7x';
+        document.getElementById('bar10').style.width = bar10Width + 'px';
+        document.getElementById('bar10-value').innerText = '12.5x';
+        document.getElementById('bar910').style.width = bar910Width + 'px';
+        document.getElementById('bar910-value').innerText = '8x';
+        document.getElementById('bar-container-5').style.display = 'block';
+        break;
+    // Add cases for other options
+}
+
             var additionalText = document.getElementById('additional-text');
             if (additionalText) {
                 additionalText.style.display = 'block';
@@ -1120,7 +1160,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </section>
     
     <!-- Services  -->
-    <section class="-py-5 Services">
+    <section class="-py-5 Services olp">
         <br> <br> <br>
         <div class="container">
             <div class="section ourTeam">
@@ -1150,6 +1190,43 @@ document.addEventListener("DOMContentLoaded", function() {
                         .mjk{
                             margin-top: -40px;
                         }
+                        @media (max-width:768px){
+                           
+                            .kj{
+                                margin-top: 6%;
+                            }
+                        }
+                        @media (min-width:800px) and (max-width:1068px){
+                           
+                           .kj{
+                               margin-top: 2%;
+                           }
+                           
+                          
+                       } 
+                       @media (min-width:769px) and (max-width:1068px){
+                           
+                           .kj{
+                               margin-top: 2%;
+                           }
+                           .ert{
+                            margin-top: 3%;
+                           }
+                          
+                       } 
+                       @media (min-width:576px) and (max-width:768px){
+                           
+                           .ert{
+                            margin-top: 20%;
+                           }
+                          
+                       } 
+                        @media (min-width:1009px) and (max-width:1250px){
+                           
+                           .kj{
+                               margin-top: -1%;
+                           }
+                       } 
                         .nmj{
                             margin-top: 80px;
                         }
@@ -1158,11 +1235,11 @@ document.addEventListener("DOMContentLoaded", function() {
                         }
                     </style>
                     
-                    <div class="col-lg-6 col-sm-6  col-md-6 mjk">
+                    <div class="col-lg-6 col-sm-6  col-md-6 mjk kj">
                         <div class="">
                             <div class=" text-center">
                                 <div class="">
-                                    <img src="assets/images/icon-3.svg" class="img-fluid" style="width: 21%;"><br>
+                                    <img src="assets/images/icon-3.svg " class="img-fluid" style="width: 21%;"><br>
                                    <br> <div class="info">
                                         <h4 class="position mr-4">Enable powerful DL <br>
                                             models on small devices </h4>
@@ -1186,7 +1263,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <div class=" pb-3">
                                     <img src="assets/images/icon-2.svg" class="img-fluid -mt-24"><br>
                                     <div class="info"><br>
-                                        <h4 class="position ml-4">Get up to <span>6x</span> inference<br>
+                                        <h4 class="position ml-4 ">Get up to <span>6x</span> inference<br>
                                             speeds on same devices </h4>
                                     </div>
                                 </div>
@@ -1201,12 +1278,12 @@ document.addEventListener("DOMContentLoaded", function() {
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-sm-6  col-md-6 nmj mjk">
+                    <div class="col-lg-6 col-sm-6  col-md-6 nmj nmj  kj ">
                         <div class="">
                             <div class=" text-center">
-                                <div class="mt-4">
-                                    <img src="assets/images/icon-6.png" class="img-fluid pb-5" style="width:55%;">
-                                    <div class="info ">
+                                <div class="mt-4 ert">
+                                    <img src="assets/images/icon-6.png" class="img-fluid pb-5" style="width:55%;" >
+                                    <div class="info ert">
                                         <h4 class="position">Secure your data by <br>
                                             switching to edge computing </h4>
                                     </div>
@@ -1300,8 +1377,9 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
     </section> -->
     <!-- Services -->
-    <section id="nyunaizero container" class="zero py-5">
-        <div class="py-5 bn">
+    <div class="llo">
+    <section id="nyunaizero container" class="zero py-5 olp llo container ">
+        <div class="py-5 bn ">
             <div class="container">
             <div class="row">
                 <div class="col-lg-12 mt-5">
@@ -1325,6 +1403,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         </div>
     </section>
+</div>
     <style>
   .equal-height-container {
     display: flex;
@@ -1339,7 +1418,9 @@ document.addEventListener("DOMContentLoaded", function() {
     align-items: flex-start;
     height: 100%; /* Make each block take up the full height of its parent */
 }
-
+.llo{
+    background-color: black;
+}
 .lc-block {
     display: flex;
     flex-direction: column;
@@ -1373,13 +1454,15 @@ document.addEventListener("DOMContentLoaded", function() {
 .hh{
     margin-top: -15px;;
 }
-
+.olp{
+    margin-top: -5px;
+}
     </style>
-    <section id="nyunadapt" class="un-lock py-5">
+    <section id="nyunadapt" class="un-lock py-5 olp">
         <div class="container py-5">
            
                 <div class="row justify-content-center mt-3 mt-md-5 equal-height-container">
-        <div class="col-md-6 col-lg-5 col-xl-4">
+        <div class="col-md-6 col-lg-5 col-xl-4 mt-5">
             <div class="misn-block lc-block h-misn-block">
                 <div class="lc-block">
  <img class="img-fluid" src="assets/images/logo-img.png">
@@ -1399,7 +1482,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
             </div>
         </div>
-        <div class="col-md-6 col-lg-5 col-xl-4">
+        <div class="col-md-6 col-lg-5 col-xl-4 mt-5">
             <div class="misn-block lc-block h-misn-block">
                 <div class="lc-block">
  <img class="img-fluid" src="assets/images/compressd.png">
@@ -1420,7 +1503,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
             </div>
         </div>
-        <div class="col-md-6 col-lg-5 col-xl-4">
+        <div class="col-md-6 col-lg-5 col-xl-4 mt-5">
             <div class="misn-block lc-block h-misn-block">
                 <div class="lc-block">
  <img class="img-fluid" src="assets/images/track_logo.svg">
@@ -1493,7 +1576,7 @@ document.addEventListener("DOMContentLoaded", function() {
        }
     </style>
     
-    <div class="bg-black">
+    <div class="bg-black olp">
         <br>
         <div class="container">
             <section class="journey py-5 ">
@@ -1521,7 +1604,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     
 
-    <footer class="bg-dark text-white text-lg-start py-5">
+    <footer class="bg-dark text-white text-lg-start py-5 olp llo">
         <!-- Grid container -->
         <div class="container p-4">
             <!-- Grid row -->
@@ -1552,7 +1635,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 <!-- Grid column -->
     
                 <!-- Grid column -->
-                <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-4 wow zoomIn" data-wow-delay="0.3s"
+                
+                <div class="col-sm-4 col-md-4 col-lg-2 mb-4 mb-md-4 wow zoomIn  margin-left:7%;margin-right: 5%;" data-wow-delay="0.3s"
                     style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
                     <h5 class="text-uppercase mb-4">PRODUCTS</h5>
     

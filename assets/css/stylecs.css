@@ -231,7 +231,13 @@ h6 {
   margin-left: -260px;
   margin-top: 8px;
 }
+@media (min-width: 828px) {
+  
+ .ctn{
+  width:500px;
+ } 
 
+}
 .banners h1 {
   font-size: 58px;
   font-weight: 700;
@@ -248,6 +254,8 @@ h6 {
 .ctn {
   margin-top: -3px;
   text-align: left;
+  margin-right:-40px;
+  width:250px;
 }}
 
 @media (max-width: 768px) {
@@ -2198,7 +2206,7 @@ p {
   }
 }
 
-    @media (max-width: 575.98px) {
+    @media (max-width: 675.98px) {
         .cover img {
       width: 100% !important;
       margin-left: 0px;
