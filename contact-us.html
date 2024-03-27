@@ -125,7 +125,7 @@ q<!DOCTYPE html>
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-5">
-                    <form>
+                    <form onsubmit="sendEmail(); reset(); return false;">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Name</label>
                             <input type="text" class="form-control" name="sname" id="sname" aria-describedby="emailHelp"
@@ -152,7 +152,7 @@ q<!DOCTYPE html>
                                 style="height: 135px;"></textarea>
                         </div>
                         <div class="mt-4">
-                            <button type="button" class="btn btn-info w-100 p-2" onclick="submit_query();">Submit</button>
+                            <button type="submit" class="btn btn-info w-100 p-2" >Submit</button>
                             <p id="result" class="text-center p-2"></p>
                         </div>
                     </form>
@@ -160,6 +160,29 @@ q<!DOCTYPE html>
             </div>
         </div>
     </section>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+<script>
+// const form = document.querySelector("form");
+const fullName = document.getElementById("sname");
+const email = document.getElementById("semail");
+const interested = document.getElementById("interested");
+const budget = document.getElementById("budget");
+const mess = document.getElementById("message");
+function sendEmail() {
+const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br>  Interested :${interested.value} <br> Budget :${budget.value} <br> Message: ${mess.value}`;
+    Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "rhitamn@gmail.com",
+    Password : "0ED720D9DFDE6A48C1E14A44A279EF0A6063",
+    To : 'contact@nyunai.com',
+    From : "hello@nyunai.com",
+    Subject : "Contact Response",
+    Body : bodyMessage
+}).then(
+  message => alert("Your response has been successfully sent. We will contact you very soon!")
+);
+}
+</script>
     <footer class="bg-dark text-white text-lg-start py-5">
         <!-- Grid container -->
         <div class="container p-4">
